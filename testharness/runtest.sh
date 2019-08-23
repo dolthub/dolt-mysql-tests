@@ -4,8 +4,10 @@ if [ -d lib/ ]; then
   cd ..
 fi
 
+CREATEDTESTDOLTDIR="$PWD/files/.dolt"
 function onExit() {
   kill $DOLTPID
+  rm -rf $CREATEDTESTDOLTDIR
 }
 trap onExit EXIT
 
@@ -14,11 +16,12 @@ DOLTTESTDETAILOUT="/dev/tty"
 if [ "$DTENABLEFILEOUTPUT" = true ]; then
   DOLTTESTRESULTOUT="output/results.txt"
   DOLTTESTDETAILOUT="output/details.txt"
-  if [ -d output/ ]; then
-    rm -rf output
-  fi
-  mkdir output
 fi
+
+if [ -d output/ ]; then
+  rm -rf output
+fi
+mkdir output
 
 MYSQLTEST="$PWD/testharness/mysqltest"
 if [ "$DOLTTESTLINKER" = true ]; then
@@ -52,7 +55,9 @@ cd ..
 function runTest() {
   SUITENAME="$1"
   TESTNAME="$2"
-  echo -n "$SUITENAME/$TESTNAME:"
+  if [ "$DTENABLEFILEOUTPUT" = true ]; then
+    echo -n "$SUITENAME/$TESTNAME:"
+  fi
   echo "Start:----- $SUITENAME/$TESTNAME" >&2
   if [ -f $PWD/r/$TESTNAME.result ]; then
     $MYSQLTEST -h 127.0.0.1 -P 9091 -u root -x $PWD/t/$TESTNAME.test -R $PWD/r/$TESTNAME.result
@@ -86,7 +91,17 @@ for TOPLEVEL in */; do
       mv $REJECT "../../../output/reject/$TOPLEVEL/$REJECT"
     fi
   done
-  cd ..
+
+  cd r
+  for LOGFILE in *.log; do
+    if [ -f $LOGFILE ]; then
+      if [ ! -d "../../../../output/log/$TOPLEVEL" ]; then
+        mkdir -p "../../../../output/log/$TOPLEVEL/"
+      fi
+      mv $LOGFILE "../../../../output/log/$TOPLEVEL/$LOGFILE"
+    fi
+  done
+  cd ../..
 done
 cd ../..
 
