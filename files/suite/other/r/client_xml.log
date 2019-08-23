@@ -1,2 +1,0 @@
-set @old_concurrent_insert= @@global.concurrent_insert;
-set @@global.concurrent_insert= 0;

@@ -1,4 +1,0 @@
-SET @start_global_value = @@global.flush_time;
-select @@global.flush_time;
-@@flush_time
-NULL

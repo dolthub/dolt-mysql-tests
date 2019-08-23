@@ -1,3 +1,0 @@
-select @@global.performance_schema_hosts_size;
-@@performance_schema_hosts_size
-NULL

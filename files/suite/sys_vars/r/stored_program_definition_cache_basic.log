@@ -1,3 +1,0 @@
-select @@global.stored_program_definition_cache;
-@@stored_program_definition_cache
-NULL

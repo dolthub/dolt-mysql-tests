@@ -1,3 +1,0 @@
-select @@global.innodb_fill_factor;
-@@innodb_fill_factor
-NULL

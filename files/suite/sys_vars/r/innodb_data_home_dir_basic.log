@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_025_01----------------------#'
-SELECT COUNT(@@GLOBAL.innodb_data_home_dir);
-COUNT(@@GLOBAL.innodb_data_home_dir)
-0
-0 Expected
-'#---------------------BS_STVARS_025_02----------------------#'

@@ -1,4 +1,0 @@
-#Bug #22445211   GCOLS: SIMPLE DML, FAILING ASSERTION:
-#!CURSOR->INDEX->IS_COMMITTED()
-#Create and alter table examples for virtual column for full
-#column index followed by prefix index.

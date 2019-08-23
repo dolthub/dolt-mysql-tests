@@ -1,3 +1,0 @@
-select @@global.performance_schema_max_socket_classes;
-@@performance_schema_max_socket_classes
-NULL

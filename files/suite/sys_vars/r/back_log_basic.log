@@ -1,3 +1,0 @@
-select @@global.back_log;
-@@back_log
-NULL

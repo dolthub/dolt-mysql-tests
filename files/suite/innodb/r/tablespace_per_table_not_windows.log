@@ -1,4 +1,0 @@
-#
-# Test the limits of a file-per-table tablespace name.  MySQL combines
-# the database name with the table name to make a unique table name.
-#

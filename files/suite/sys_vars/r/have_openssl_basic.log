@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_013_01----------------------#'
-SELECT COUNT(@@GLOBAL.have_openssl);
-COUNT(@@GLOBAL.have_openssl)
-0
-1 Expected
-'#---------------------BS_STVARS_013_02----------------------#'

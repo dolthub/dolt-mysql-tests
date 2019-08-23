@@ -1,8 +1,0 @@
-#
-# Tests for the Performance Schema native functions ps_thread_id()
-# and ps_current_thread_id()
-
-# 'connection ID' is the MySQL server processlist ID
-# 'thread ID' is the Performance Schema thread ID assigned to the connection ID
-
-

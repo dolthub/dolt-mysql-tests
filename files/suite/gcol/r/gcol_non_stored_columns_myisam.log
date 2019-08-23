@@ -1,2 +1,0 @@
-SET @@session.default_storage_engine = 'MyISAM';
-# Case 1. All non-stored columns.

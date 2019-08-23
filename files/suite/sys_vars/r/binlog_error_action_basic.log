@@ -1,4 +1,0 @@
-SELECT @@GLOBAL.binlog_error_action;
-@@GLOBAL.binlog_error_action
-NULL
-ABORT_SERVER Expected

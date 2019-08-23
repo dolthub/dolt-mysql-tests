@@ -1,4 +1,0 @@
-#
-# WL#12261 - Test in replication environment.
-#
-include/master-slave.inc

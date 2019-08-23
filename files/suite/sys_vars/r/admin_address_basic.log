@@ -1,3 +1,0 @@
-select @@global.admin_address;
-@@admin_address
-NULL

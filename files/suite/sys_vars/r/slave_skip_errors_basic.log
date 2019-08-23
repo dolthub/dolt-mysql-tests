@@ -1,3 +1,0 @@
-select @@global.slave_skip_errors;
-@@slave_skip_errors
-NULL

@@ -1,3 +1,0 @@
-select @@global.innodb_read_io_threads;
-@@innodb_read_io_threads
-NULL

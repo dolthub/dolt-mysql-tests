@@ -1,7 +1,0 @@
-SELECT @@innodb_stats_include_delete_marked;
-@@innodb_stats_include_delete_marked
-NULL
-SET GLOBAL innodb_stats_include_delete_marked=1;
-SELECT @@innodb_stats_include_delete_marked;
-@@innodb_stats_include_delete_marked
-1

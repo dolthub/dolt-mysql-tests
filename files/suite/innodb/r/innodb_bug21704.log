@@ -1,7 +1,0 @@
-#
-# Bug#21704: Renaming column does not update FK definition.
-#
-
-# Test that it's not possible to rename columns participating in a
-# foreign key (either in the referencing or referenced table).
-

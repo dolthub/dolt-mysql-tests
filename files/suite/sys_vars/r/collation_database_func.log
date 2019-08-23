@@ -1,4 +1,0 @@
-'#--------------------FN_DYNVARS_011_01-------------------------#'
-SET @global_collation_database = @@global.collation_database;
-SET @session_collation_database = @@session.collation_database;
-SET @session_collation_server = @@session.collation_server;

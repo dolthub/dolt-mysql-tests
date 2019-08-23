@@ -1,1 +1,0 @@
-set @is_enable_default = @@global.ndb_index_stat_enable;

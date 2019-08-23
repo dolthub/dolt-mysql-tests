@@ -1,3 +1,0 @@
-select @@global.myisam_recover_options;
-@@myisam_recover_options
-NULL

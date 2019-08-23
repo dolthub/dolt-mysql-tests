@@ -1,3 +1,0 @@
-# This file contains test cases to validate the behavior of system
-# variable 'table_encryption_privilege_check' with various
-# permissions a user --echo # can have.

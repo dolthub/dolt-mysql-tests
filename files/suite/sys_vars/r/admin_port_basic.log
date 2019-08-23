@@ -1,3 +1,0 @@
-select @@global.admin_port;
-@@admin_port
-NULL

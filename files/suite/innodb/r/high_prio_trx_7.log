@@ -1,4 +1,0 @@
-# Scenario:1
-#  T1= ({W(B)}, HIGH_PRIORITY)
-#  T2= ( Try to take table level lock )
-# Outcome: T2 waits for t1 to acquire table lock

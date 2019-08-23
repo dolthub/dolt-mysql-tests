@@ -1,3 +1,0 @@
-select @@global.performance_schema_setup_objects_size;
-@@performance_schema_setup_objects_size
-NULL

@@ -1,6 +1,0 @@
-** Setup **
-
-SET @default_read_only = @@global.read_only;
-SET @default_super_read_only = @@global.super_read_only;
-SET @@global.read_only = OFF;
-SET @@global.super_read_only = OFF;

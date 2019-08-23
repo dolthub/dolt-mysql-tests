@@ -1,9 +1,0 @@
-SET @mysqlx_max_connections_sav= @@global.mysqlx_max_connections;
-SET GLOBAL mysqlx_max_connections=150;
-show variables like 'mysqlx_max_connections';
-Variable_name	Value
-mysqlx_max_connections	150
-SET @@global.mysqlx_max_connections=500;
-show variables like 'mysqlx_max_connections';
-Variable_name	Value
-mysqlx_max_connections	500

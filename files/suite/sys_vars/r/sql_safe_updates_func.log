@@ -1,3 +1,0 @@
-** Setup **
-
-SET @default_sql_safe_updates = @@sql_safe_updates;

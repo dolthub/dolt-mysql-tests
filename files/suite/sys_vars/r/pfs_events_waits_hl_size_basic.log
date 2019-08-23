@@ -1,3 +1,0 @@
-select @@global.performance_schema_events_waits_history_long_size;
-@@performance_schema_events_waits_history_long_size
-NULL

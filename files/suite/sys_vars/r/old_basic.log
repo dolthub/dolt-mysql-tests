@@ -1,3 +1,0 @@
-select @@global.old;
-@@old
-NULL

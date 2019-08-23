@@ -1,5 +1,0 @@
-#
-# Bug lp1739734  "Federated table returns error 1430 from storage engine"
-#
-# This is a bug introduced in the artful/gcc7 compilation fixes, caused by
-# a moved break statement.

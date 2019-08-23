@@ -1,5 +1,0 @@
-#
-# Bug#26997500 - UPGRADE FAILS DUE TO ORPHAN .FRM AND CANNOT BE RESUMED
-#
-# Set different paths for --datadir
-# Copy the remote tablespace & DB zip files from suite location to working location.

@@ -1,4 +1,0 @@
-***********************************************************************
-* Run only on debug build,non-windows as few server variables are not
-* available on all platforms.
-***********************************************************************

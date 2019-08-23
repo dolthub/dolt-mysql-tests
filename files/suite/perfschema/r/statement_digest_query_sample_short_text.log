@@ -1,9 +1,0 @@
-
-#### Test 1 - VERIFY QUERY_SAMPLE_TEXT LENGTH IS LIMITED BY PERFORMANCE_SCHEMA_MAX_SQL_TEXT_LENGTH
-
-
-# 1.1 Verify sql text length = 10
-SELECT @@global.performance_schema_max_sql_text_length;
-@@performance_schema_max_sql_text_length
-NULL
-

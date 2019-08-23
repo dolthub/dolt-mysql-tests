@@ -1,5 +1,0 @@
-#
-# Verifies that the original query ends up in the statements history in
-# performance_schema, and that digests are calculated even though the
-# statements_digest consumer is disabled.
-#

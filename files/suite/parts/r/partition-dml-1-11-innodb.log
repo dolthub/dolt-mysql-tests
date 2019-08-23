@@ -1,2 +1,0 @@
-SET GLOBAL innodb_strict_mode=OFF;
-SET innodb_strict_mode=OFF;

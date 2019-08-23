@@ -1,9 +1,0 @@
-select 1, 1.0, -1, "hello", NULL;
-Catalog	Database	Table	Table_alias	Column	Column_alias	Type	Length	Max length	Is_null	Flags	Decimals	Charsetnr
-def					1	8	0	1	Y	32768	0	33
-def					1	5	0	1	Y	32768	0	33
-def					-1	8	0	2	Y	32768	0	33
-def					"hello"	252	0	5	Y	0	0	33
-def					<nil>	6	0	0	Y	32896	0	33
-1	1	-1	"hello"	<nil>
-1	1	-1	hello	NULL

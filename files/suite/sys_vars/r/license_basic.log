@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_040_01----------------------#'
-SELECT COUNT(@@GLOBAL.license);
-COUNT(@@GLOBAL.license)
-0
-1 Expected
-'#---------------------BS_STVARS_040_02----------------------#'

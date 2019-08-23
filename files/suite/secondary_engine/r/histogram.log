@@ -1,4 +1,0 @@
-#
-# Test that histograms are used for optimizing queries that are
-# offloaded to a secondary storage engine.
-#

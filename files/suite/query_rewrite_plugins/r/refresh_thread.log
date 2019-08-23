@@ -1,4 +1,0 @@
-#
-# Tests of the dedicated thread for refreshing the rules table.
-#
-SET sql_mode = 'PIPES_AS_CONCAT';

@@ -1,8 +1,0 @@
-#
-# Test of function defaults for any server.
-# We run the same tests with different settings for better coverage.
-#
-#
-# Function defaults run 2. Six digits scale on seconds
-# precision. InnoDB.
-#

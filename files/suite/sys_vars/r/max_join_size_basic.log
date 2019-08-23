@@ -1,1 +1,0 @@
-SET @start_global_value = @@global.max_join_size;

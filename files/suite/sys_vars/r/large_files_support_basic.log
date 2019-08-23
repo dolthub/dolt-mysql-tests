@@ -1,3 +1,0 @@
-select @@global.large_files_support;
-@@large_files_support
-NULL

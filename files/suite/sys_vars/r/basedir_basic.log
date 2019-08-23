@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_001_01----------------------#'
-SELECT COUNT(@@GLOBAL.basedir);
-COUNT(@@GLOBAL.basedir)
-0
-1 Expected
-'#---------------------BS_STVARS_001_02----------------------#'

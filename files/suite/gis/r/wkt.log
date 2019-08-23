@@ -1,5 +1,0 @@
-SET @wkt_pt = 'POINT(0 0)';
-SET @wkt_ln = 'LINESTRING(0 0,2 2,4 4,6 6,8 8, 10 10)';
-SET @wkt_py = 'POLYGON((0 0,0 10,10 10,10 0,0 0),(4 4,4 6,6 6,6 4,4 4))';
-SET @wkt_mpt = 'MULTIPOINT(0 0,2 2,4 4,6 6)';
-SET @wkt_mln = 'MULTILINESTRING((0 0,2 2,4 4),(6 6,8 8,10 10))';

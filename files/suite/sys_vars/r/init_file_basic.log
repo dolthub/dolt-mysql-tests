@@ -1,3 +1,0 @@
-select @@global.init_file;
-@@init_file
-NULL

@@ -1,3 +1,0 @@
-select @@global.large_pages;
-@@large_pages
-NULL

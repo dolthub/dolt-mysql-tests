@@ -1,3 +1,0 @@
-select @@global.create_admin_listener_thread;
-@@create_admin_listener_thread
-NULL

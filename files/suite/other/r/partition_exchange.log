@@ -1,6 +1,0 @@
-#
-# Bug#11894100: EXCHANGE PARTITION CAN'T BE EXECUTED IF
-#               ROW_FORMAT WAS SET EXPLICITLY
-#
-SET sql_mode = 'NO_ENGINE_SUBSTITUTION';
-# Same definition (both have ROW_FORMAT set)

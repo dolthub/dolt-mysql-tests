@@ -1,8 +1,0 @@
-#
-# Prepare
-#
-SET @big_tables_saved = @@big_tables;
-SET @optimizer_switch_saved = @@optimizer_switch;
-#
-# Check if selected collations have required padding mode
-#

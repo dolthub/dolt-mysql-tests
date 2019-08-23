@@ -1,6 +1,0 @@
-#
-# Bug#40277 SHOW CREATE VIEW returns invalid SQL
-# Bug#41999 SHOW CREATE VIEW returns invalid SQL if subquery is used in SELECT list
-#
-# 65 characters exceed the maximum length of a column identifier. The system cannot derive the name from statement.
-#    Constant with length = 65 . Expect to get the identifier 'Name_exp_1'.

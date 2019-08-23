@@ -1,4 +1,0 @@
-#
-# Bug #47412: Valgrind warnings / user can read uninitalized memory
-# using SP variables
-#

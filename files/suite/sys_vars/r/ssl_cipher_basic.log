@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_048_01----------------------#'
-SELECT COUNT(@@GLOBAL.ssl_cipher);
-COUNT(@@GLOBAL.ssl_cipher)
-0
-0 Expected
-'#---------------------BS_STVARS_048_02----------------------#'

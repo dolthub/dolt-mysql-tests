@@ -1,3 +1,0 @@
-select @@global.have_profiling="1";
-@@have_profiling = "1"
-NULL

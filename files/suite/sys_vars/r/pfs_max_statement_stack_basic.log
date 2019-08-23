@@ -1,6 +1,0 @@
-select @@global.performance_schema_max_statement_stack;
-@@performance_schema_max_statement_stack
-NULL
-select @@global.performance_schema_max_statement_stack;
-@@performance_schema_max_statement_stack
-NULL

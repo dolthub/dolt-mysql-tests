@@ -1,3 +1,0 @@
-select @@global.max_digest_length;
-@@max_digest_length
-NULL

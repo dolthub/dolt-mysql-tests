@@ -1,3 +1,0 @@
-select @@global.skip_show_database;
-@@skip_show_database
-NULL

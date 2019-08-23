@@ -1,5 +1,0 @@
-#
-# WL#7766 Deprecate the EOF packet
-# This WL can be tested by checking if session state which is sent
-# as part of OK packet is displayed as part of SELECT sql statement.
-#

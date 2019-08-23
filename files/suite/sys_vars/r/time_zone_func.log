@@ -1,4 +1,0 @@
-** Setup **
-
-SET @session_time_zone = @@SESSION.time_zone;
-SET @global_time_zone = @@GLOBAL.time_zone;

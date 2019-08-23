@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_054_01----------------------#'
-SELECT COUNT(@@GLOBAL.version_comment);
-COUNT(@@GLOBAL.version_comment)
-0
-1 Expected
-'#---------------------BS_STVARS_054_02----------------------#'

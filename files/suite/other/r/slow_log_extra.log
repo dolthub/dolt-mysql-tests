@@ -1,4 +1,0 @@
-#WL#12393: Logging: Add new command line option, --log-slow-extra,
-#          for richer slow logging
-
-SET @save_sqlf=@@global.slow_query_log_file;

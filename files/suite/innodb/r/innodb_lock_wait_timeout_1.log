@@ -1,4 +1,0 @@
-#
-# Bug #40113: Embedded SELECT inside UPDATE or DELETE can timeout 
-#  without error
-#

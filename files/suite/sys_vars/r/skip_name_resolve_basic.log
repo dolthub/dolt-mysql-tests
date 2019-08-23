@@ -1,9 +1,0 @@
-SHOW VARIABLES LIKE 'skip_name_resolve';
-Variable_name	Value
-SHOW GLOBAL VARIABLES LIKE 'skip_name_resolve';
-Variable_name	Value
-SHOW SESSION VARIABLES LIKE 'skip_name_resolve';
-Variable_name	Value
-SELECT @@skip_name_resolve;
-@@skip_name_resolve
-NULL

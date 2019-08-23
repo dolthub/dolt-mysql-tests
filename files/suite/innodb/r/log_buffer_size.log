@@ -1,3 +1,0 @@
-'#-----------------------------------------------------------#'
-'Test what happens when the innodb_log_buffer_size is changed'
-' in runtime (both decreased and increased).'

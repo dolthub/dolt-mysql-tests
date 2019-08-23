@@ -1,1 +1,0 @@
-SET @start_global_value = @@session.gtid_next;

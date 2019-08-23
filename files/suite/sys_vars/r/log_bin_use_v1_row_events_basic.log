@@ -1,2 +1,0 @@
-'#---------------------BS_STVARS_002_01----------------------#'
-SET @start_value= @@global.log_bin_use_v1_row_events;

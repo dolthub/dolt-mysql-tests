@@ -1,3 +1,0 @@
-select @@global.log_error;
-@@log_error
-NULL

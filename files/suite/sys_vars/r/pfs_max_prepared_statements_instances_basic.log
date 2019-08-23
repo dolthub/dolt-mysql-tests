@@ -1,6 +1,0 @@
-select @@global.performance_schema_max_prepared_statements_instances;
-@@performance_schema_max_prepared_statements_instances
-NULL
-select @@global.performance_schema_max_prepared_statements_instances;
-@@performance_schema_max_prepared_statements_instances
-NULL

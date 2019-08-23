@@ -1,5 +1,0 @@
-#
-# Tests for the Performance Schema native functions ps_thread_id()
-# and ps_current_thread_id()
-
-# Get the connection ID of this connection

@@ -1,4 +1,0 @@
-SELECT COUNT(@@GLOBAL.innodb_adaptive_hash_index_parts);
-COUNT(@@GLOBAL.innodb_adaptive_hash_index_parts)
-0
-1 Expected

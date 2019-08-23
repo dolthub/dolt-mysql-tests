@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_015_01----------------------#'
-SELECT COUNT(@@GLOBAL.have_query_cache);
-COUNT(@@GLOBAL.have_query_cache)
-0
-1 Expected
-'#---------------------BS_STVARS_015_02----------------------#'

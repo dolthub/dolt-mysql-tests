@@ -1,9 +1,0 @@
-# Bug #22477433: TABLE WITH UNKNOWN COLLATION CRASHES MYSQL
-#
-# Create a table with a certain collation. Restart
-# the server with a new --character-sets-dir where
-# the collation is not supported. Verify that we
-# can do DROP and RENAME TABLE, and that CHECK TABLE
-# will report a warning.
-#
-# New character sets dir:

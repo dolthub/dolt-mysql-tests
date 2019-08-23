@@ -1,6 +1,0 @@
-SET @mysqlx_min_worker_threads_sav= @@global.mysqlx_min_worker_threads;
-SET GLOBAL mysqlx_min_worker_threads=150;
-SET @@global.mysqlx_min_worker_threads=15;
-show variables like 'mysqlx_min_worker_threads';
-Variable_name	Value
-mysqlx_min_worker_threads	15

@@ -1,3 +1,0 @@
-select @@global.performance_schema_max_metadata_locks;
-@@performance_schema_max_metadata_locks
-NULL

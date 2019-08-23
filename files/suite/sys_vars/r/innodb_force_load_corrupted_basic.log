@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_031_01----------------------#'
-SELECT COUNT(@@GLOBAL.innodb_force_load_corrupted);
-COUNT(@@GLOBAL.innodb_force_load_corrupted)
-0
-1 Expected
-'#---------------------BS_STVARS_031_02----------------------#'

@@ -1,6 +1,0 @@
-#
-# Bug#17076131 MYSQLDUMP FAILS WHEN ERR LOG ON RUNNING SERVER IS
-#              DELETED ON WINDOWS
-#
-# Creating file aliases.
-# Executing mysqldump normally.

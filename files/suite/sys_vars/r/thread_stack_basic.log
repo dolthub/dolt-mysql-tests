@@ -1,3 +1,0 @@
-select @@global.thread_stack;
-@@thread_stack
-NULL

@@ -1,9 +1,0 @@
-
-#
-# Part 1 : Statements with IGNORE to convert Errors to Warnings.
-#
-
-SET @org_mode=@@sql_mode;
-#
-#For Error Code : ER_ROW_DOES_NOT_MATCH_GIVEN_PARTITION_SET
-#

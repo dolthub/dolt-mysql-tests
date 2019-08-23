@@ -1,6 +1,0 @@
-#
-# Tests that the optional column columns work both of they are present
-# and absent. PATTERN_DIGEST and NORMALIZED_PATTERN are optional write-
-# only columns that are not present by default. The MESSAGE column is
-# optional, but included in the install script by default.
-#

@@ -1,3 +1,0 @@
-SELECT COUNT(@@GLOBAL.mysqlx_ssl_cert);
-COUNT(@@GLOBAL.mysqlx_ssl_cert)
-0

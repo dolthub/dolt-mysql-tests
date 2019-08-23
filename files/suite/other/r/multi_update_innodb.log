@@ -1,4 +1,0 @@
-#
-# BUG#57373: Multi update+InnoDB reports ER_KEY_NOT_FOUND if a
-#            table is updated twice
-#

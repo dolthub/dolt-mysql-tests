@@ -1,4 +1,0 @@
-#
-# InnoDB supports CREATE/ALTER/DROP UNDO TABLESPACE
-# Show that up to 125 explicit undo tablespaces can be created.
-#

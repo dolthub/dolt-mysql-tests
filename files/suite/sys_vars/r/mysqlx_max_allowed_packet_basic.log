@@ -1,6 +1,0 @@
-SET @mysqlx_max_allowed_packet_sav= @@global.mysqlx_max_allowed_packet;
-SET GLOBAL mysqlx_max_allowed_packet=5000000;
-SET @@global.mysqlx_max_allowed_packet=7000000;
-show variables like 'mysqlx_max_allowed_packet';
-Variable_name	Value
-mysqlx_max_allowed_packet	7000000

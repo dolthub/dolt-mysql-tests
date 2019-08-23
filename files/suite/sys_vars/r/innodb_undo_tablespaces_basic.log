@@ -1,3 +1,0 @@
-SELECT @@GLOBAL.innodb_undo_tablespaces >= 2;
-@@GLOBAL.innodb_undo_tablespaces >= 2
-NULL

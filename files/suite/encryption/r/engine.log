@@ -1,8 +1,0 @@
-#
-# WL#12261 Control (enforce and disable) table encryption
-#
-# Check for use of ENCRYPTION clause on tables using engines that
-# does not support encryption.
-#
-# 1. Requesting encryption on SE that does not support encryption.
-#

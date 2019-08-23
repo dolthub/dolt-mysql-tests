@@ -1,2 +1,0 @@
-SET lock_wait_timeout= 1;
-SET autocommit= 0;

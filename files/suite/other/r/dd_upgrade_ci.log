@@ -1,4 +1,0 @@
-########################################################################
-# This test scripts covers meta data related aspects of upgrade
-# after 8.0. For upgrade from 5.7 to 8.0, see dd_upgrade_test.
-########################################################################

@@ -1,7 +1,0 @@
-#
-# Extract the contents of mysql.dd_properties and format it in a
-# human readable way. Include the file in the result file of
-# this test. Filter out version numbers. The results file is
-# recorded on a case sensitive file system, which has an impact
-# of some of the collations.
-#

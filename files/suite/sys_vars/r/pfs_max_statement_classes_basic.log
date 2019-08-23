@@ -1,3 +1,0 @@
-select @@global.performance_schema_max_statement_classes;
-@@performance_schema_max_statement_classes
-NULL

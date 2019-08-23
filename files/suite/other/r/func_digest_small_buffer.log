@@ -1,8 +1,0 @@
-#
-# Tests that the same token buffer size is applied in STATEMENT_DIGEST()
-# as in performance_schema.
-#
-#
-# Just making sure that these digests are equal, otherwise this test
-# won't test what we want it to.
-#

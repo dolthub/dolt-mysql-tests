@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_052_01----------------------#'
-SELECT COUNT(@@GLOBAL.tmpdir);
-COUNT(@@GLOBAL.tmpdir)
-0
-1 Expected
-'#---------------------BS_STVARS_052_02----------------------#'

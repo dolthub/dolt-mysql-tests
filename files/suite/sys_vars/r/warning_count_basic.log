@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_057_01----------------------#'
-SELECT COUNT(@@SESSION.warning_count);
-COUNT(@@SESSION.warning_count)
-0
-1 Expected
-'#---------------------BS_STVARS_057_02----------------------#'

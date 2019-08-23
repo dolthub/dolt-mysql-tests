@@ -1,3 +1,0 @@
-select @@global.character_sets_dir;
-@@character_sets_dir
-NULL

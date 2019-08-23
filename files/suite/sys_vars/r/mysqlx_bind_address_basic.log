@@ -1,4 +1,0 @@
-SELECT COUNT(@@GLOBAL.mysqlx_bind_address);
-COUNT(@@GLOBAL.mysqlx_bind_address)
-0
-1 Expected

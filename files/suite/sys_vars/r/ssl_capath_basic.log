@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_046_01----------------------#'
-SELECT COUNT(@@GLOBAL.ssl_capath);
-COUNT(@@GLOBAL.ssl_capath)
-0
-0 Expected
-'#---------------------BS_STVARS_046_02----------------------#'

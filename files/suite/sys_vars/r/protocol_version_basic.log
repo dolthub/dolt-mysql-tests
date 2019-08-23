@@ -1,3 +1,0 @@
-select @@global.protocol_version;
-@@protocol_version
-NULL

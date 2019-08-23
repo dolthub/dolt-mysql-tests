@@ -1,8 +1,0 @@
-#
-# Windows version of Tablespace Portability test.
-#
-# This testcase is related to WL#5980 & WL#6205.
-# It tests whether datafiles can be copied from one location
-# to another, and still be opened. In order to make this testcase run
-# on any OS, we create the tablespaces here.
-#

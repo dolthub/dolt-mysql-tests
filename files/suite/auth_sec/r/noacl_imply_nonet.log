@@ -1,2 +1,0 @@
-SHOW VARIABLES LIKE 'skip_networking';
-Variable_name	Value

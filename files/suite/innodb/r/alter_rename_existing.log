@@ -1,7 +1,0 @@
-#
-# Show what happens during ALTER TABLE when an existing file
-# exists in the target location.
-#
-# Bug #19218794: IF TABLESPACE EXISTS, CAN'T CREATE TABLE,
-#                BUT CAN ALTER ENGINE=INNODB
-#

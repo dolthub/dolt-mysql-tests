@@ -1,3 +1,0 @@
-select @@global.report_port;
-@@report_port
-NULL

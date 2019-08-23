@@ -1,4 +1,0 @@
-set @v1a="Hello";
-set @v2a="World";
-set @v3a=65;
-set @v4a=NULL;

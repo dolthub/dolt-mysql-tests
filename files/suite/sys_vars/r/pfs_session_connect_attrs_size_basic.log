@@ -1,3 +1,0 @@
-select @@global.performance_schema_session_connect_attrs_size;
-@@performance_schema_session_connect_attrs_size
-NULL

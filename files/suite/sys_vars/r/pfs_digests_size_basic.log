@@ -1,3 +1,0 @@
-select @@global.performance_schema_digests_size;
-@@performance_schema_digests_size
-NULL

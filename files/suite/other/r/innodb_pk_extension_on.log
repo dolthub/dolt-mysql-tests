@@ -1,7 +1,0 @@
-#
-#  WL#6266 Make use of hidden key parts
-#
-#
-# Optimizer switch use_index_extensions=on
-#
-set optimizer_switch= "use_index_extensions=on";

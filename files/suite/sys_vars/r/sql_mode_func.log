@@ -1,4 +1,0 @@
-** Setup **
-
-SET @sql_mode_session = @@SESSION.sql_mode;
-SET @sql_mode_global = @@GLOBAL.sql_mode;

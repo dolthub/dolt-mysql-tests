@@ -1,9 +1,0 @@
-#
-# Variable name : persisted_globals_load
-# Scope         : Global Read only
-#
-# Global - default
-SELECT @@global.persisted_globals_load;
-@@persisted_globals_load
-NULL
-# via performance_schema.global_variables

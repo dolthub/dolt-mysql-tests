@@ -1,2 +1,0 @@
-SET GLOBAL innodb_file_per_table=1;
-SET SESSION innodb_strict_mode=ON;

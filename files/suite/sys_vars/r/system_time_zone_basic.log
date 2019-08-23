@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_050_01----------------------#'
-SELECT COUNT(@@GLOBAL.system_time_zone);
-COUNT(@@GLOBAL.system_time_zone)
-0
-1 Expected
-'#---------------------BS_STVARS_050_02----------------------#'

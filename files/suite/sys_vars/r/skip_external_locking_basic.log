@@ -1,3 +1,0 @@
-select @@global.skip_external_locking;
-@@skip_external_locking
-NULL

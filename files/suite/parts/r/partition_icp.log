@@ -1,4 +1,0 @@
-#
-# test using Index Condition Pushdown for partitioned tables
-#
-# Test behavior of ICP calls -> use ICP for InnoDB even for BLOB indexes.

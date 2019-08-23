@@ -1,4 +1,0 @@
-SELECT COUNT(@@GLOBAL.innodb_undo_directory);
-COUNT(@@GLOBAL.innodb_undo_directory)
-0
-1 Expected

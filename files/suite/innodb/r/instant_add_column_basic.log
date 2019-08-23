@@ -1,7 +1,0 @@
-##############################################
-# Test instant ADD COLUMN for REDUNDANT format
-##############################################
-#
-# Scenario 1:
-# Create a small table, and add all kinds of new columns and verify
-#

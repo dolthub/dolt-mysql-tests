@@ -1,8 +1,0 @@
-SELECT COUNT(@@GLOBAL.innodb_page_cleaners);
-COUNT(@@GLOBAL.innodb_page_cleaners)
-0
-1 Expected
-SELECT COUNT(@@innodb_page_cleaners);
-COUNT(@@innodb_page_cleaners)
-0
-1 Expected

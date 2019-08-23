@@ -1,6 +1,0 @@
-#
-# Test system variables related to secondary engine.
-#
-# Test use_secondary_engine system variable.
-SET @my_use_secondary_engine = @@use_secondary_engine;
-# Test with an invalid argument.

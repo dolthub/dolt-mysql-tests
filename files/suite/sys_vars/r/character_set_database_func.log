@@ -1,5 +1,0 @@
-'#--------------------FN_DYNVARS_008_01-------------------------#'
-SET @global_character_set_database = @@global.character_set_database;
-SET @session_character_set_database = @@session.character_set_database;
-SET @session_character_set_server = @@session.character_set_server;
-SET @global_character_set_server = @@global.character_set_server;

@@ -1,4 +1,0 @@
-show global variables like 'performance_schema_max_thread_classes';
-Variable_name	Value
-show global variables like 'performance_schema_max_thread_instances';
-Variable_name	Value

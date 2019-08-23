@@ -1,4 +1,0 @@
-# This test changes undo related settings both at runtime, between restarts,
-# and also after crashes.
-# Note that innodb_undo_tablespaces is now fixed at 2 so only
-# innodb_rollback_segments is tested here.

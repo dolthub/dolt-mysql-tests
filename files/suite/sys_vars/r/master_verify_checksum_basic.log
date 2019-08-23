@@ -1,4 +1,0 @@
-set @save_master_verify_checksum =  @@global.master_verify_checksum;
-select @@global.master_verify_checksum  as 'must be zero because of default';
-must be zero because of default
-NULL

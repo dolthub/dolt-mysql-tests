@@ -1,9 +1,0 @@
-'#________________________VAR_05_table_definition_cache__________________#'
-echo '##'
---echo '#---------------------WL6372_VAR_5_01----------------------#'
-####################################################################
-#   Checking default value                                         #
-####################################################################
-SELECT COUNT(@@GLOBAL.table_definition_cache)
-1 Expected
-SET @@GLOBAL.table_definition_cache=DEFAULT;

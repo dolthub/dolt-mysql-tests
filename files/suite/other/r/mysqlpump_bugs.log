@@ -1,4 +1,0 @@
-#
-# Bug#23102944: MYSQLPUMP LEAKS MEMORY IN CASE OF ERRORS.
-#
-# testing a failed connection: must not crash

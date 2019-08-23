@@ -1,4 +1,0 @@
-#
-# Bug#51376 Assert `! is_set()' failed in 
-#           Diagnostics_area::set_ok_status on DROP FUNCTION
-#

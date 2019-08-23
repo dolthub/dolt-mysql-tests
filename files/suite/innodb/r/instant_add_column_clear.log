@@ -1,8 +1,0 @@
-##############################################
-# Test instant ADD COLUMN for REDUNDANT format
-##############################################
-#
-# Scenario 1:
-# Create a normal table, rebuild and truncate will clear the instant
-# information
-#

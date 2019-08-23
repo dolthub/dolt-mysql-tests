@@ -1,1 +1,0 @@
-SET sql_mode = 'NO_ENGINE_SUBSTITUTION';

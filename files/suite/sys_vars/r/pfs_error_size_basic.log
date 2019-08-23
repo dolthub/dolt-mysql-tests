@@ -1,3 +1,0 @@
-select @@global.performance_schema_error_size;
-@@performance_schema_error_size
-NULL

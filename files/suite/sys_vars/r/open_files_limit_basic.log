@@ -1,3 +1,0 @@
-select @@global.open_files_limit;
-@@open_files_limit
-#

@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_035_01----------------------#'
-SELECT COUNT(@@GLOBAL.innodb_api_disable_rowlock);
-COUNT(@@GLOBAL.innodb_api_disable_rowlock)
-0
-1 Expected
-'#---------------------BS_STVARS_035_02----------------------#'

@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_034_01----------------------#'
-SELECT COUNT(@@GLOBAL.innodb_log_files_in_group);
-COUNT(@@GLOBAL.innodb_log_files_in_group)
-0
-1 Expected
-'#---------------------BS_STVARS_034_02----------------------#'

@@ -1,3 +1,0 @@
-select @@global.performance_schema;
-@@performance_schema
-NULL

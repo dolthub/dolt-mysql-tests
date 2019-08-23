@@ -1,4 +1,0 @@
-#
-# Test for the example pre parse query rewrite plugin. The example
-# plugin rewrites queries to lowercase.
-#

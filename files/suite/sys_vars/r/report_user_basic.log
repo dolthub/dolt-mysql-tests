@@ -1,3 +1,0 @@
-select @@global.report_user;
-@@report_user
-NULL

@@ -1,3 +1,0 @@
-select @@global.ft_max_word_len;
-@@ft_max_word_len
-NULL

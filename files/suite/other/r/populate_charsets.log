@@ -1,8 +1,0 @@
-# Bug #22284224: REWRITE REPOPULATION OF CHARACTER SETS AND COLLATIONS DURING STARTUP
-#
-# Verify that new collations become available in the server
-# after a restart. Verify that previously existing
-# collations are deleted if they are not present in the
-# character sets dir when restarting.
-#
-# New character sets dir:

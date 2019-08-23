@@ -1,3 +1,0 @@
-select @@global.performance_schema_max_stage_classes;
-@@performance_schema_max_stage_classes
-NULL

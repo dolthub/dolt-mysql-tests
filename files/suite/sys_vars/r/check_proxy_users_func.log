@@ -1,4 +1,0 @@
-** Setup **
-
-SET @default_check_proxy_users = @@check_proxy_users;
-'#----- 1.2.4 superuser set variable -------------------------#'

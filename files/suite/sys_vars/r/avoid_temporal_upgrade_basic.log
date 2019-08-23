@@ -1,5 +1,0 @@
-SELECT @@global.avoid_temporal_upgrade;
-@@avoid_temporal_upgrade
-NULL
-SHOW GLOBAL VARIABLES LIKE 'avoid_temporal_upgrade';
-Variable_name	Value

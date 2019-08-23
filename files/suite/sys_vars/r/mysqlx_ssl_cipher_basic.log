@@ -1,3 +1,0 @@
-SELECT COUNT(@@GLOBAL.mysqlx_ssl_cipher);
-COUNT(@@GLOBAL.mysqlx_ssl_cipher)
-0

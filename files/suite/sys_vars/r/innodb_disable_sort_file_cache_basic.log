@@ -1,1 +1,0 @@
-SET @start_global_value = @@global.innodb_disable_sort_file_cache;

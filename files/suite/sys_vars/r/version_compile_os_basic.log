@@ -1,6 +1,0 @@
-'#---------------------BS_STVARS_056_01----------------------#'
-SELECT COUNT(@@GLOBAL.version_compile_os);
-COUNT(@@GLOBAL.version_compile_os)
-0
-1 Expected
-'#---------------------BS_STVARS_056_02----------------------#'

@@ -1,2 +1,0 @@
-# This test scripts covers upgrade of tables, views, tablespaces,
-# events, stored routines and triggers from 5.7 to 8.0.

@@ -1,1 +1,0 @@
-SET @start_global_value = @@global.sync_relay_log_info;

@@ -1,3 +1,0 @@
-select @@global.performance_schema_max_digest_length;
-@@performance_schema_max_digest_length
-NULL

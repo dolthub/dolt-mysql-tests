@@ -1,3 +1,0 @@
-select @@global.performance_schema_max_cond_instances;
-@@performance_schema_max_cond_instances
-NULL

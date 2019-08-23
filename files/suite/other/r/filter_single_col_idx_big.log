@@ -1,5 +1,0 @@
-#
-# Bug#18446462: ASSERT `ROWS >= 0.0' AT
-#               COST_MODEL_SERVER::ROW_EVALUATE_COST IN 
-#               OPT_COSTMODEL.H
-#

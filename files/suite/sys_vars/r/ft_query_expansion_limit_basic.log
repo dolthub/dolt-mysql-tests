@@ -1,3 +1,0 @@
-select @@global.ft_query_expansion_limit;
-@@ft_query_expansion_limit
-NULL

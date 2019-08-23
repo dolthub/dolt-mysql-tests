@@ -1,3 +1,0 @@
-select @@global.large_page_size = 1;
-@@large_page_size = 1
-NULL

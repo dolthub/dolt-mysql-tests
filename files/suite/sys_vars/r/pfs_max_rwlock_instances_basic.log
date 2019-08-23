@@ -1,3 +1,0 @@
-select @@global.performance_schema_max_rwlock_instances;
-@@performance_schema_max_rwlock_instances
-NULL

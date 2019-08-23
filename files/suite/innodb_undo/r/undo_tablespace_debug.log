@@ -1,4 +1,0 @@
-#
-# Inject failures in order to get code coverage.
-# Use explicit undo tablespaces and make the implicit spaces inactive.
-#

@@ -1,3 +1,0 @@
-select @@global.performance_schema_users_size;
-@@performance_schema_users_size
-NULL

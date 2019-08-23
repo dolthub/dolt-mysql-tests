@@ -1,3 +1,0 @@
-** Setup **
-
-SET @original_sql_buffer_result = @@sql_buffer_result;

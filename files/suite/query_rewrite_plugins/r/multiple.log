@@ -1,4 +1,0 @@
-#
-# Test of multiple query rewrite plugins. This will only work on an
-# installation, where all plugins are in the same directory.
-#

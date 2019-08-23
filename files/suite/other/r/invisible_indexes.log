@@ -1,5 +1,0 @@
-#
-# WL#8697: Invisible Indexes
-#
-SET SESSION information_schema_stats_expiry=0;
-# Test of ALTER INDEX syntax.

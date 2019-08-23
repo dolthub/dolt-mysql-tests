@@ -1,1 +1,0 @@
-SET @start_global_value = @@global.innodb_random_read_ahead;
