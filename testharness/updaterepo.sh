@@ -7,7 +7,7 @@ trap onExit EXIT
 
 go run parseoutput.go
 if [ $? -ne 0 ]; then
-  echo "`date -u`: 'go run parseoutput.go' failed" >> ../FAILED.txt
+  echo "`date -u`: 'go run parseoutput.go' failed"
   exit 1
 fi
 

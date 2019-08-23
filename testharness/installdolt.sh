@@ -17,7 +17,7 @@ git log -1 --format="%H" | tr -d '\n' > ../currentdolt.txt
 cd go/cmd/dolt
 go install .
 if [ $? -ne 0 ]; then
-  echo "`date -u`: 'go install .' failed" >> ../../../../../FAILED.txt
+  echo "`date -u`: 'go install .' failed"
   exit 1
 fi
 

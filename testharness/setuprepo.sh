@@ -1,14 +1,14 @@
 #!/bin/bash
 
 if [ ! -f ~/.dolt/config_global.json ]; then
-  echo "`date -u`: global dolt config has not been created" >> ../FAILEDPARSE.txt
+  echo "`date -u`: global dolt config has not been created"
   exit 1
 fi
 
 if [ ! -d .dolt/ ]; then
   dolt clone Liquidata/mysql-integration-tests
   if [ $? -ne 0 ]; then
-    echo "`date -u`: 'dolt clone Liquidata/mysql-integration-tests' failed" >> ../FAILEDPARSE.txt
+    echo "`date -u`: 'dolt clone Liquidata/mysql-integration-tests' failed"
     exit 1
   fi
   mv mysql-integration-tests/.dolt ./.dolt
