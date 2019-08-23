@@ -1,6 +1,6 @@
-#!/bin/bash
+ #!/bin/bash
 
-if [ ! -d files/ ]; then
+if [ -d lib/ ]; then
   cd ..
 fi
 
@@ -15,7 +15,7 @@ fi
 mkdir output
 
 MYSQLTEST="$PWD/testharness/mysqltest"
-if [ $DOLTAUTOJENKINS = true ]; then
+if [ $DOLTTESTLINKER = true ]; then
   MYSQLTEST="$PWD/testharness/lib/ld-linux-x86-64.so.2 --library-path $PWD/testharness/lib $PWD/testharness/mysqltest"
 fi
 

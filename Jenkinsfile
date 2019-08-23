@@ -11,7 +11,7 @@ pipeline {
                 PATH = "~/go/bin:${env.PATH}"
                 DOLTHUBCRED = credentials("system-account-dolthub-creds")
                 DOLTHUBCONFIG = credentials("system-account-dolthub-config")
-                DOLTAUTOJENKINS = true
+                DOLTTESTLINKER = true
             }
             steps {
                 dir ("") {
