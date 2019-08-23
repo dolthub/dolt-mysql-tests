@@ -9,13 +9,20 @@ function onExit() {
 }
 trap onExit EXIT
 
-if [ -d output/ ]; then
-  rm -rf output
+DOLTTESTRESULTOUT="output/results.txt"
+DOLTTESTDETAILOUT="output/details.txt"
+if [ "$DTDISABLEFILEOUTPUT" = true ]; then
+  DOLTTESTRESULTOUT="/dev/tty"
+  DOLTTESTDETAILOUT="/dev/tty"
+else
+  if [ -d output/ ]; then
+    rm -rf output
+  fi
+  mkdir output
 fi
-mkdir output
 
 MYSQLTEST="$PWD/testharness/mysqltest"
-if [ $DOLTTESTLINKER = true ]; then
+if [ "$DOLTTESTLINKER" = true ]; then
   MYSQLTEST="$PWD/testharness/lib/ld-linux-x86-64.so.2 --library-path $PWD/testharness/lib $PWD/testharness/mysqltest"
 fi
 
@@ -84,4 +91,4 @@ for TOPLEVEL in */; do
 done
 cd ../..
 
-} 1>output/results.txt 2>output/details.txt # Output redirection target files
+} 1>$DOLTTESTRESULTOUT 2>$DOLTTESTDETAILOUT # Output redirection target files
