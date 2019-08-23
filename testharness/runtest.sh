@@ -14,7 +14,6 @@ DOLTTESTDETAILOUT="/dev/tty"
 if [ "$DTENABLEFILEOUTPUT" = true ]; then
   DOLTTESTRESULTOUT="output/results.txt"
   DOLTTESTDETAILOUT="output/details.txt"
-else
   if [ -d output/ ]; then
     rm -rf output
   fi
