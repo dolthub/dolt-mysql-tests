@@ -1,0 +1,1 @@
+SET GLOBAL log_error_services='';

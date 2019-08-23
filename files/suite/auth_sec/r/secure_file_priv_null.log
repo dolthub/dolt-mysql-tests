@@ -1,0 +1,6 @@
+#-----------------------------------------------------------------------
+# Setup
+#-----------------------------------------------------------------------
+# Search for : --secure-file-priv is set to NULL. Operations
+#              related to importing and exporting data are
+#              disabled

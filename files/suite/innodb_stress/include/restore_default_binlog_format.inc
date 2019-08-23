@@ -1,0 +1,1 @@
+../../../include/restore_default_binlog_format.inc

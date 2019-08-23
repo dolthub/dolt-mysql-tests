@@ -1,0 +1,1 @@
+../../../include/rpl_generate_sync_chain.inc

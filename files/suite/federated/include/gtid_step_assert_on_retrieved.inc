@@ -1,0 +1,1 @@
+../../../include/gtid_step_assert_on_retrieved.inc

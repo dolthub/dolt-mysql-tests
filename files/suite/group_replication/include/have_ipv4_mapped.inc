@@ -1,0 +1,1 @@
+../../../include/have_ipv4_mapped.inc

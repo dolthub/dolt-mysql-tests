@@ -1,0 +1,7 @@
+SET @saved_value= @@GLOBAL.slave_preserve_commit_order;
+#
+# Verify it can be queried corrected in different ways.
+#
+SELECT @@GLOBAL.slave_preserve_commit_order;
+@@GLOBAL.slave_preserve_commit_order
+NULL

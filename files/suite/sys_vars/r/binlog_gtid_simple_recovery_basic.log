@@ -1,0 +1,3 @@
+SELECT @@GLOBAL.binlog_gtid_simple_recovery;
+@@GLOBAL.binlog_gtid_simple_recovery
+NULL

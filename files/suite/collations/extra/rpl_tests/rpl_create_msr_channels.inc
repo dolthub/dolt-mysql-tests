@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_create_msr_channels.inc

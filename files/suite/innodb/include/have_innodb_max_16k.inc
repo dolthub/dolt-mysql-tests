@@ -1,0 +1,1 @@
+../../../include/have_innodb_max_16k.inc

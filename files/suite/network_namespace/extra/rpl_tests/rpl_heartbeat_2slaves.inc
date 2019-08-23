@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_heartbeat_2slaves.inc

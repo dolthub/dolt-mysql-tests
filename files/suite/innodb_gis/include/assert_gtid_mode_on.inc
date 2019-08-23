@@ -1,0 +1,1 @@
+../../../include/assert_gtid_mode_on.inc

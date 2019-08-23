@@ -1,0 +1,1 @@
+../../../include/have_group_replication_gtid_assignment_block_size_1.inc

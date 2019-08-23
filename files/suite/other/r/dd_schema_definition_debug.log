@@ -1,0 +1,104 @@
+########################################################################
+#
+# Verify definitions of DD tables.
+# --------------------------------
+# This test has four parts:
+#
+# 1. Verify the hard coded ids of the mysql schema, the mysql
+#    tablespace, the dd_properties table, and the
+#    innodb_dynamic_metadata table.
+# 2. Verify the existence of the expected DD tables, neither less nor
+#    more.
+# 3. Verify the DD_VERSION and the CREATE TABLE statements of the
+#    DD tables.
+# 4. Verify the checksum of the generated meta data associated with the
+#    current DD version number.
+#
+########################################################################
+#
+# A note regarding the checksum usage.
+# ------------------------------------
+# This is based on a test by Marc Alff (perfschema.dd_version_check).
+# The idea is to keep a record of each DD version released with the
+# DD version number and a checksum created based on the meta data for
+# the DD tables. It is important not to change the expected checksum
+# once a release has been published.
+#
+# If there was an intentional change, leading to a new checksum, then:
+#
+# 1. Uncomment the debug output showing the low level meta data and
+#    verify that the changes are intentional.
+# 2. Create a new target DD version (unless the existing target DD
+#    version is not publicly released yet).
+# 3. Add a new row in test.dd_published_schema with the new target
+#    DD version and the new checksum (or update the expected
+#    checksum if the target DD version is not publicly released yet).
+#
+# Note that a failure to do 2, when doing 3, will result in a broken
+# upgrade where the server code is expecting a certain DD table
+# definition, while the actual persisted DD table definition is
+# different (because it was created by a previous server binary, and
+# DD upgrade handling was not triggered).
+#
+# Thus, this part of the test is designed to be a reminder to do 2.
+# by detecting differences in 3.
+#
+########################################################################
+#
+# How to handle test failures.
+# ----------------------------
+# In general, if there is a change leading to a failure in this test,
+# then we must first consider whether the change is intentional, i.e.,
+# whether there is a change in a DD table definition or DD bootstrap
+# code that we actually want to do, or whether the change is by mistake
+# or not needed.
+#
+# Then, if the change is intentional, we must make sure the following
+# scenarios are handled:
+#
+# 1. Plain initialization of the server. This is most likely handled,
+#    otherwise we wouldn't even get to the point where this test starts
+#    failing.
+# 2. Plain server restart using a data directory initialized by this
+#    server.
+# 3. Upgrade from any supported DD version, or server restart using
+#    a data directory from a different server version using the same
+#    DD version.
+# 4. Minor downgrade to any DD version within the minor downgrade
+#    threshold, or restart of a different server version using the
+#    data directory initialized by this server.
+#
+# Failures in the different parts of the test must be handled as
+# follows:
+#
+# *  A failure in part 1 means that the server may not be able to start,
+#    e.g. if we restart a previous server version (expecting different
+#    ids) using a data directory initialized by this server version.
+# *  A failure in part 2 means that a DD table is added or removed.
+#    In this case, please make sure the tables 'dd_table_names' and
+#    'ddse_table_names' below are kept up to date. Also make sure that
+#    the list of SHOW CREATE TABLE statements is up to date.
+# *  A failure in part 2 or 3 means that there is a change in the DD
+#    table definitions, and that we have a new DD version. So
+#    if the current target DD version number is released publicly,
+#    then we must bump the target DD version. If the DD version is
+#    not yet released, and has already been bumped, then it should
+#    stay the same. Additionally, we must add server code to handle
+#    the DD upgrade. This test must have its results re-recorded. A
+#    failure in part 2 or 3 will most likely also lead to a failure
+#    in part 4.
+# *  A failure in part 4 means that the generated meta data is
+#    different than it used to be. If there is a change in part 2 or
+#    3, this is to be expected. In that case, the test results must
+#    be re-recorded, and we must either update the expected checksum
+#    (if the DD version stays the same) or add the new DD version
+#    along with the expected checksum. However, if there is not a
+#    change in part 2 or 3, then we have changes in the SQL DDL
+#    semantics. This should be handled by changing the DD initialization
+#    procedure to either tweak the DDL statements before execution
+#    (without changing the DDL statements that are stored in the
+#    mysql.dd_properties table), or by tweaking the generated low
+#    level meta data. Either way, the result of the changes to the
+#    server code should be that this test stops failing.
+#
+########################################################################

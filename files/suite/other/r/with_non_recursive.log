@@ -1,0 +1,3 @@
+# In-memory tmp tables
+set big_tables=0;
+# WL#883 Non-recursive WITH clause (common table expression)

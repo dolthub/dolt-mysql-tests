@@ -1,0 +1,1 @@
+../../../include/restore_group_replication_auto_increment.inc

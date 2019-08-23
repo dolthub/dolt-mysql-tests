@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/delayed_slave_wait_on_query.inc

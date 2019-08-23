@@ -1,0 +1,5 @@
+Testing NDB algorithm
+Setup connections for use in this file
+First we have Cluster A as Primary, Cluster B as Secondary
+SET GLOBAL ndb_slave_conflict_role="PRIMARY";
+SET GLOBAL ndb_slave_conflict_role="SECONDARY";

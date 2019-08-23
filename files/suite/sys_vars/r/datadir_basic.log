@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_004_01----------------------#'
+SELECT COUNT(@@GLOBAL.datadir);
+COUNT(@@GLOBAL.datadir)
+0
+1 Expected
+'#---------------------BS_STVARS_004_02----------------------#'

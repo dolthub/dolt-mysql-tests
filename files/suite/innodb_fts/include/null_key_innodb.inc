@@ -1,0 +1,1 @@
+../../../include/null_key_innodb.inc

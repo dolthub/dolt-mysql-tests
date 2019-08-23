@@ -1,0 +1,3 @@
+# This file contains test cases to validate the behavior of system
+# variables 'default_table_encryption' with various permissions a user
+# can have.

@@ -1,0 +1,1 @@
+../../../include/const_folding_dec_real.inc

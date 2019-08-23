@@ -1,0 +1,1 @@
+../../../../lib/t/testMyConfigFactory.t

@@ -1,0 +1,1 @@
+../../../include/have_example_component.inc

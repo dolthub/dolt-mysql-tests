@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/mysqlbinlog_start_stop_1.inc

@@ -1,0 +1,10 @@
+#
+# Tests for the Performance Schema native functions ps_thread_id()
+# and ps_current_thread_id() with disabled Performance Schema
+
+# Verify the Performance Schema is disabled
+SELECT @@global.performance_schema AS 'Expect 0';
+expect 0
+NULL
+
+# Get the connection ID of this connection

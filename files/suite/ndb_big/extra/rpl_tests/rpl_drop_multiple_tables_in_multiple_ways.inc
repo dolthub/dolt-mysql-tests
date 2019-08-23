@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_drop_multiple_tables_in_multiple_ways.inc

@@ -1,0 +1,1 @@
+../../../include/force_myisam_default.inc

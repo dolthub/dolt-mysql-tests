@@ -1,0 +1,6 @@
+#
+# Bug #84958 InnoDB's MVCC has O(N^2) behaviors
+# https://bugs.mysql.com/bug.php?id=84958
+#
+# Set up the test with a procedure and a function.
+#

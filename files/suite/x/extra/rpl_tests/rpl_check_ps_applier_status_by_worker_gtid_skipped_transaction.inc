@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_check_ps_applier_status_by_worker_gtid_skipped_transaction.inc

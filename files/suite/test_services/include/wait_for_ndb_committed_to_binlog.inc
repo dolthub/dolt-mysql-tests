@@ -1,0 +1,1 @@
+../../../include/wait_for_ndb_committed_to_binlog.inc

@@ -1,0 +1,1 @@
+../../../include/delete_all_rows.inc

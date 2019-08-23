@@ -1,0 +1,8 @@
+SET @@session.default_storage_engine = 'ndbcluster';
+#
+# Section 1. Wrong column definition options
+#            - DEFAULT <value>
+#            - AUTO_INCREMENT
+#            - SERIAL DEFAULT VALUE
+#            - ON UPDATE NOW ...
+# NOT NULL

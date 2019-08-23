@@ -1,0 +1,45 @@
+ERROR HY000: unknown error: Code: INVALID_ARGUMENT
+syntax error at position 37 near 'into'
+
+ERROR HY000: unknown error: column "@CML" could not be found in any table in scope
+ERROR HY000: unknown error: column "@CML" could not be found in any table in scope
+ERROR HY000: unknown error: column "@CML" could not be found in any table in scope
+ERROR HY000: unknown error: column "@CML" could not be found in any table in scope
+ERROR HY000: unknown error: column "@CML" could not be found in any table in scope
+ERROR HY000: unknown error: database not found: mysql
+ERROR HY000: unknown error: function: 'if' not found
+ERROR HY000: unknown error: function: 'if' not found
+ERROR HY000: unknown error: function: 'if' not found
+ERROR HY000: unknown error: function: 'if' not found
+ERROR HY000: unknown error: column "@ENGINE_MYISAM" could not be found in any table in scope
+ERROR HY000: unknown error: column "@ENGINE_INNODB" could not be found in any table in scope
+ERROR HY000: unknown error: column "@ENGINE_MEMORY" could not be found in any table in scope
+ERROR HY000: unknown error: column "@ENGINE_NDB" could not be found in any table in scope
+DROP DATABASE IF EXISTS test1;
+ERROR HY000: unknown error: unsupported syntax: &sqlparser.DBDDL{Action:"drop", DBName:"test1", IfExists:false, Collate:"", Charset:""}
+CREATE DATABASE test1 charset latin1;
+ERROR HY000: unknown error: unsupported syntax: &sqlparser.DBDDL{Action:"create", DBName:"test1", IfExists:false, Collate:"", Charset:""}
+USE test;
+ERROR HY000: unknown error: database not found: test
+USE test;
+ERROR HY000: unknown error: database not found: test
+SET sql_mode = 'NO_ENGINE_SUBSTITUTION';
+USE test;
+ERROR HY000: unknown error: database not found: test
+DROP TABLE IF EXISTS t1, t2, t4, t10, t11;
+ERROR HY000: unknown error: unsupported syntax: &sqlparser.DDL{Action:"drop", ColumnAction:"", Column:sqlparser.ColIdent{_:[0]struct { _ []uint8 }{}, val:"", lowered:""}, ToColumn:sqlparser.ColIdent{_:[0]struct { _ []uint8 }{}, val:"", lowered:""}, FromTables:sqlparser.TableNames{sqlparser.TableName{Name:sqlparser.TableIdent{v:"t1"}, Qualifier:sqlparser.TableIdent{v:""}}, sqlparser.TableName{Name:sqlparser.TableIdent{v:"t2"}, Qualifier:sqlparser.TableIdent{v:""}}, sqlparser.TableName{Name:sqlparser.TableIdent{v:"t4"}, 
+CREATE TABLE t1  (f1 char(20),f2 char(25),f3 date,f4 int,f5 char(25),f6 int)
+charset latin1 ENGINE = InnoDB;
+ERROR HY000: unknown error: Type not supported: CHAR
+CREATE TABLE t2  (f1 char(20),f2 char(25),f3 date,f4 int,f5 char(25),f6 int)
+charset latin1 ENGINE = InnoDB;
+ERROR HY000: unknown error: Type not supported: CHAR
+CREATE TABLE t4  (f1 char(20),f2 char(25),f3 date,f4 int,f5 char(25),f6 int)
+charset latin1 ENGINE = InnoDB;
+ERROR HY000: unknown error: Type not supported: CHAR
+CREATE TABLE t10 (f1 char(20),f2 char(25),f3 date,f4 int,f5 char(25),f6 int)
+charset latin1 ENGINE = InnoDB;
+ERROR HY000: unknown error: Type not supported: CHAR
+CREATE TABLE t11 (f1 char(20),f2 char(25),f3 date,f4 int,f5 char(25),f6 int)
+charset latin1 ENGINE = InnoDB;
+ERROR HY000: unknown error: Type not supported: CHAR

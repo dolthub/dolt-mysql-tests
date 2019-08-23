@@ -1,0 +1,1 @@
+../../../../std_data/funcs_1/load_file.txt

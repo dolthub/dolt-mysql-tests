@@ -1,0 +1,5 @@
+#
+# Bug#26091333 : ASSERTION `RC == TYPE_OK' FAILED
+#
+SET timestamp=1000;
+SET time_zone='+00:00';

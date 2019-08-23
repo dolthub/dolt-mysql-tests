@@ -1,0 +1,1 @@
+../../../include/have_local_infile.inc

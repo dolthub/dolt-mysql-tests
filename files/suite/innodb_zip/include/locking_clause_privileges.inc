@@ -1,0 +1,1 @@
+../../../include/locking_clause_privileges.inc

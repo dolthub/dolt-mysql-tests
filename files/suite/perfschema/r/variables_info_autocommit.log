@@ -1,0 +1,3 @@
+select @@autocommit, @@big_tables;
+@@autocommit	@@big_tables
+NULL	NULL

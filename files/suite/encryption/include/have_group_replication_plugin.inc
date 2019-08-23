@@ -1,0 +1,1 @@
+../../../include/have_group_replication_plugin.inc

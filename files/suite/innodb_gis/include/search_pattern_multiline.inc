@@ -1,0 +1,1 @@
+../../../include/search_pattern_multiline.inc

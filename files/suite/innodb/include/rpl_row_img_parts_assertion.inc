@@ -1,0 +1,1 @@
+../../../include/rpl_row_img_parts_assertion.inc

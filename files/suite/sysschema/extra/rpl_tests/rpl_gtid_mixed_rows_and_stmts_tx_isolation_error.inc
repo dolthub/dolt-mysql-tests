@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_gtid_mixed_rows_and_stmts_tx_isolation_error.inc

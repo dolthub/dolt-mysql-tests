@@ -1,0 +1,1 @@
+../../../include/show_all_binlogs.inc

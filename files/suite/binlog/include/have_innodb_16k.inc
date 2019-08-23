@@ -1,0 +1,1 @@
+../../../include/have_innodb_16k.inc

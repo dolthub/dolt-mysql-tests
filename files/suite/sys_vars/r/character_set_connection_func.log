@@ -1,0 +1,5 @@
+'#--------------------FN_DYNVARS_011_01-------------------------#'
+SET @global_character_set_connection = @@global.character_set_connection;
+SET @session_character_set_connection = @@session.character_set_connection;
+SET @session_character_set_client = @@session.character_set_client;
+SET @session_character_set_results = @@session.character_set_results;

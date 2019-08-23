@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/mysqlbinlog_start_stop_streaming_input_1.inc

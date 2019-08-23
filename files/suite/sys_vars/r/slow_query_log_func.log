@@ -1,0 +1,6 @@
+SET @global_slow_query_log = @@global.slow_query_log;
+SET @global_log_output = @@global.log_output;
+SET @@session.long_query_time=1;
+SET @@global.log_output = 'TABLE';
+'----When slow_query_log = OFF----'
+SET @@global.slow_query_log = OFF;

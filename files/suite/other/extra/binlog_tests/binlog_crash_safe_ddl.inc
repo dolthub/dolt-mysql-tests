@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/binlog_crash_safe_ddl.inc

@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_semi_sync_group_commit_deadlock.inc

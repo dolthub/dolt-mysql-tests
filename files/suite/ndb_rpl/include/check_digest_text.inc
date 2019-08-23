@@ -1,0 +1,1 @@
+../../../include/check_digest_text.inc

@@ -1,0 +1,1 @@
+../../../include/have_posix_locale.inc

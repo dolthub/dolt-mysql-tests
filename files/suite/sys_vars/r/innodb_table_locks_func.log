@@ -1,0 +1,2 @@
+'#--------------------FN_DYNVARS_048_01-------------------------#'
+SET @start_value= @@global.innodb_table_locks;

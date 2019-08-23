@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/check_type.inc

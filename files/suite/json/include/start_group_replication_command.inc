@@ -1,0 +1,1 @@
+../../../include/start_group_replication_command.inc

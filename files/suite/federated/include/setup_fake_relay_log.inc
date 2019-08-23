@@ -1,0 +1,1 @@
+../../../include/setup_fake_relay_log.inc

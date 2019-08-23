@@ -1,0 +1,1 @@
+set @@session.sql_mode='';

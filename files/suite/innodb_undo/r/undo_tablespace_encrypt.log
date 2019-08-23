@@ -1,0 +1,8 @@
+#
+# Bug #29492911 : ENABLING UNDO-TABLESPACE ENCRYPTION DOESN'T MARK TABLESPACE ENCRYPTION FLAG
+#
+SHOW VARIABLES LIKE "%innodb_undo_log_encrypt%";
+Variable_name	Value
+###############################################################################
+# With keyring plugin and innodb_undo_log_encrypt=ON
+###############################################################################

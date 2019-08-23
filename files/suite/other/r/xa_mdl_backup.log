@@ -1,0 +1,5 @@
+#
+# Bug#22710164 xa with innodb allows a table to be dropped while an xa
+# transaction has dml
+#
+# Enable Lock Instrumentation

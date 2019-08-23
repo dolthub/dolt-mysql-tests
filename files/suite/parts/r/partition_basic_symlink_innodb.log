@@ -1,0 +1,3 @@
+#
+# Verify that the DATA/INDEX DIR is stored and used if ALTER to MyISAM.
+#

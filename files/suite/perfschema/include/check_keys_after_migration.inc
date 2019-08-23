@@ -1,0 +1,1 @@
+../../../include/check_keys_after_migration.inc

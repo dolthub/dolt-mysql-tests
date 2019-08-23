@@ -1,0 +1,1 @@
+../../../include/relocate_binlogs.inc

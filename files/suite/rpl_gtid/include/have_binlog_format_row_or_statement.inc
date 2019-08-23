@@ -1,0 +1,1 @@
+../../../include/have_binlog_format_row_or_statement.inc

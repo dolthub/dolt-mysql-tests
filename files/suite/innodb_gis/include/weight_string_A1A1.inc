@@ -1,0 +1,1 @@
+../../../include/weight_string_A1A1.inc

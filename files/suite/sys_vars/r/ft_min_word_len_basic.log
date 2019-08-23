@@ -1,0 +1,3 @@
+select @@global.ft_min_word_len;
+@@ft_min_word_len
+NULL

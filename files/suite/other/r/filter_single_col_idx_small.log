@@ -1,0 +1,4 @@
+# 
+# Test that on a tiny table, the computed filtering effect is not
+# less than one row for the basic condition filter constants
+#

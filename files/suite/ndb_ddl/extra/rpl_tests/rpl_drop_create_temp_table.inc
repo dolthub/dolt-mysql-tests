@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_drop_create_temp_table.inc

@@ -1,0 +1,1 @@
+../../../include/ctype_innodb_like.inc

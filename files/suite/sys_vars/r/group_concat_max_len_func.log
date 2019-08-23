@@ -1,0 +1,1 @@
+SET @save = @@global.group_concat_max_len;

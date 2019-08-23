@@ -1,0 +1,1 @@
+../../../include/check_ftwrl_incompatible.inc

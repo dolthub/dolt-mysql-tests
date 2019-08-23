@@ -1,0 +1,1 @@
+SET @session_updatable_views_with_limit = @@Session.UPDATABLE_VIEWS_WITH_LIMIT;

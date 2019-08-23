@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_ignore_table_filter_insensitive.inc

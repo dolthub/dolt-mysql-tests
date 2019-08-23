@@ -1,0 +1,3 @@
+'#--------------------FN_DYNVARS_012_01-------------------------#'
+SET @global_character_set_results = @@global.character_set_results;
+SET @session_character_set_results = @@session.character_set_results;

@@ -1,0 +1,4 @@
+#
+# WL#6986 : Make switching of index due to order by limit cost based
+#
+# Testcase for Bug#16522053

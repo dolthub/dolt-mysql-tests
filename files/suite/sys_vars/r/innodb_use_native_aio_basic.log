@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_035_01----------------------#'
+SELECT COUNT(@@GLOBAL.innodb_use_native_aio);
+COUNT(@@GLOBAL.innodb_use_native_aio)
+0
+1 Expected
+'#---------------------BS_STVARS_035_02----------------------#'

@@ -1,0 +1,6 @@
+** Setup **
+
+SET @default_sql_notes = @@sql_notes;
+'#--------------------FN_DYNVARS_162_01-------------------------#'
+SET SESSION sql_notes = ON;
+creating a temporary table

@@ -1,0 +1,7 @@
+set names sjis;
+select 'a' like 'a';
+"a" LIKE "a"
+1
+select 'A' like 'a';
+"A" LIKE "a"
+0

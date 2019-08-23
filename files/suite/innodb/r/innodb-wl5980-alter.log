@@ -1,0 +1,4 @@
+#
+# This is a copy of innodb-alter.test except using remote tablespaces
+# and showing those files.
+#

@@ -1,0 +1,6 @@
+'#--------------------FN_DYNVARS_022_01-------------------------#'
+## Setting variable's value to 0 ##
+SET @@session.default_week_format = 0;
+SELECT @@session.default_week_format;
+@@default_week_format
+0

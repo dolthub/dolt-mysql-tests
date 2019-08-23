@@ -1,0 +1,1 @@
+../../../include/store_group_replication_auto_increment.inc

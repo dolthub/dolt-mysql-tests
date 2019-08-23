@@ -1,0 +1,1 @@
+../../../include/restore_sql_mode_after_turn_off_only_full_group_by.inc

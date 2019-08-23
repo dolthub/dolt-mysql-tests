@@ -1,0 +1,27 @@
+SELECT CAST(0.0e0 AS JSON) = -0.0e0;
+convert(0, json) = -0
+1
+SELECT CAST(CAST(0 AS DECIMAL) AS JSON) = CAST(-0.0e0 AS DECIMAL);
+convert(convert(0, decimal), json) = -0
+1
+SELECT CAST(0.0e0 AS JSON) = CAST(-0.0e0 AS DECIMAL);
+convert(0, json) = -0
+1
+SELECT CAST(CAST(0 AS DECIMAL) AS JSON) = -0.0e0;
+convert(convert(0, decimal), json) = -0
+1
+SELECT CAST(CAST(0 AS SIGNED) AS JSON) = -0.0e0;
+convert(0, json) = -0
+1
+SELECT CAST(CAST(0 AS SIGNED) AS JSON) = CAST(-0.0e0 AS DECIMAL);
+convert(0, json) = -0
+1
+SELECT CAST(CAST(0 AS UNSIGNED) AS JSON) = -0.0e0;
+convert(convert(0, unsigned), json) = -0
+1
+SELECT CAST(CAST(0 AS UNSIGNED) AS JSON) = CAST(-0.0e0 AS DECIMAL);
+convert(convert(0, unsigned), json) = -0
+1
+select cast('"abc"' as json);
+convert("\"abc\"", json)
+"ImFiYyI="

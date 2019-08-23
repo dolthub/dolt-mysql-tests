@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/print_optional_metadata.inc

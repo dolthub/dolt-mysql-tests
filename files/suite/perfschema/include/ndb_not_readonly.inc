@@ -1,0 +1,1 @@
+../../../include/ndb_not_readonly.inc

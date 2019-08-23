@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_018_01----------------------#'
+SELECT COUNT(@@GLOBAL.have_symlink);
+COUNT(@@GLOBAL.have_symlink)
+0
+1 Expected
+'#---------------------BS_STVARS_018_02----------------------#'

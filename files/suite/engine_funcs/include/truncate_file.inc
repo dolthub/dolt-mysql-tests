@@ -1,0 +1,1 @@
+../../../include/truncate_file.inc

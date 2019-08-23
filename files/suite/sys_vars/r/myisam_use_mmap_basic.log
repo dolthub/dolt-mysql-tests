@@ -1,0 +1,13 @@
+'#---------------------BS_STVARS_042_01----------------------#'
+SELECT COUNT(@@GLOBAL.myisam_use_mmap);
+COUNT(@@GLOBAL.myisam_use_mmap)
+0
+1 Expected
+'#---------------------BS_STVARS_042_02----------------------#'
+"BUG:It should give error on setting this variable as it is readonly variable"
+Expected error 'Read only variable'
+SELECT COUNT(@@GLOBAL.myisam_use_mmap);
+COUNT(@@GLOBAL.myisam_use_mmap)
+0
+1 Expected
+'#---------------------BS_STVARS_042_03----------------------#'

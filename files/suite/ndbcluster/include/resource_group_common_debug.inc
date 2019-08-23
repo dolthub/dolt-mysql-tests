@@ -1,0 +1,1 @@
+../../../include/resource_group_common_debug.inc

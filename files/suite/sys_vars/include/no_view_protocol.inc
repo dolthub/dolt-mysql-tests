@@ -1,0 +1,1 @@
+../../../include/no_view_protocol.inc

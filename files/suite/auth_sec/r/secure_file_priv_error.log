@@ -1,0 +1,3 @@
+#-----------------------------------------------------------------------
+# Setup
+# Try to restart server with invalid value for --secure-file-priv

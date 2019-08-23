@@ -1,0 +1,4 @@
+# Default values
+SELECT @@GLOBAL.binlog_max_flush_queue_time;
+@@GLOBAL.binlog_max_flush_queue_time
+NULL

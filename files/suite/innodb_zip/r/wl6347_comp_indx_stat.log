@@ -1,0 +1,9 @@
+#******************************************************************
+# Test 1: Test the interaction between stats and compression level
+#         and logging of compressed pages configuration
+# This testcase is to verify the table/idex level compression stats
+# When the flags are set as follows
+# innodb_cmp_per_index_enabled=ON and innodb_compression_level=0
+# page size 1K,2K,4K,8K,16K
+# check the size and compression stats of the table tab5
+#******************************************************************

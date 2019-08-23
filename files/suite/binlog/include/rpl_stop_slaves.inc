@@ -1,0 +1,1 @@
+../../../include/rpl_stop_slaves.inc

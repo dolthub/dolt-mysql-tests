@@ -1,0 +1,1 @@
+../../../include/have_slave_repository_type_table.inc

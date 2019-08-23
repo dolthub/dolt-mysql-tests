@@ -1,0 +1,7 @@
+
+## Test the Performance Schema Notification service WL#8881
+##
+## 1. Install component to register callbacks for each API
+## 2. Launch multiple sessions to trigger callback events, log the events to file
+## 3. Import log file into a table
+## 4. Verify the contents of the table

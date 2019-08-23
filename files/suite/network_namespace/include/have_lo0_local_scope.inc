@@ -1,0 +1,1 @@
+../../../include/have_lo0_local_scope.inc

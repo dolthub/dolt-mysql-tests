@@ -1,0 +1,2 @@
+SET @old_lock_wait_timeout= @@global.innodb_lock_wait_timeout;
+SET GLOBAL innodb_lock_wait_timeout=1;

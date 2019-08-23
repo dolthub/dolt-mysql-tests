@@ -1,0 +1,21 @@
+SET @@session.sql_mode = 'NO_ENGINE_SUBSTITUTION';
+
+--source suite/funcs_1/storedproc/load_sp_tb.inc
+--------------------------------------------------------------------------------
+SET sql_mode = 'NO_ENGINE_SUBSTITUTION';
+
+--source suite/funcs_1/storedproc/cleanup_sp_tb.inc
+--------------------------------------------------------------------------------
+DROP DATABASE IF EXISTS db_storedproc;
+ERROR HY000: unknown error: unsupported syntax: &sqlparser.DBDDL{Action:"drop", DBName:"db_storedproc", IfExists:false, Collate:"", Charset:""}
+DROP DATABASE IF EXISTS db_storedproc_1;
+ERROR HY000: unknown error: unsupported syntax: &sqlparser.DBDDL{Action:"drop", DBName:"db_storedproc_1", IfExists:false, Collate:"", Charset:""}
+CREATE DATABASE db_storedproc charset utf8mb4;
+ERROR HY000: unknown error: unsupported syntax: &sqlparser.DBDDL{Action:"create", DBName:"db_storedproc", IfExists:false, Collate:"", Charset:""}
+CREATE DATABASE db_storedproc_1 charset utf8mb4;
+ERROR HY000: unknown error: unsupported syntax: &sqlparser.DBDDL{Action:"create", DBName:"db_storedproc_1", IfExists:false, Collate:"", Charset:""}
+USE db_storedproc;
+ERROR HY000: unknown error: database not found: db_storedproc
+create table t1(f1 char(20),f2 char(25),f3 date,f4 int,f5 char(25),f6 int)
+engine = <engine_to_be_tested>;
+ERROR HY000: unknown error: Type not supported: CHAR

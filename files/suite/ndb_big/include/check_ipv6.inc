@@ -1,0 +1,1 @@
+../../../include/check_ipv6.inc

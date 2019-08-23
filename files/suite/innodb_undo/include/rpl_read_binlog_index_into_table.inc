@@ -1,0 +1,1 @@
+../../../include/rpl_read_binlog_index_into_table.inc

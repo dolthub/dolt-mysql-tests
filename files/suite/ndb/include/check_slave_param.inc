@@ -1,0 +1,1 @@
+../../../include/check_slave_param.inc

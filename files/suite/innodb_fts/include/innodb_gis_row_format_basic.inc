@@ -1,0 +1,1 @@
+../../../include/innodb_gis_row_format_basic.inc

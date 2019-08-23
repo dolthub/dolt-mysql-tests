@@ -1,0 +1,6 @@
+select @@global.performance_schema_max_program_instances;
+@@performance_schema_max_program_instances
+NULL
+select @@global.performance_schema_max_program_instances;
+@@performance_schema_max_program_instances
+NULL

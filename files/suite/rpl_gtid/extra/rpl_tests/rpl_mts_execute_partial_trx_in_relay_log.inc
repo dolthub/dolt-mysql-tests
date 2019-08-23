@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_mts_execute_partial_trx_in_relay_log.inc

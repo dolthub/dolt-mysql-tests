@@ -1,0 +1,1 @@
+../../../include/gr_clear_persistent_variables.inc

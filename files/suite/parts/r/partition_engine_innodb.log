@@ -1,0 +1,7 @@
+SET @max_row = 20;
+SET @@session.default_storage_engine = 'InnoDB';
+
+#------------------------------------------------------------------------
+#  0. Setting of auxiliary variables + Creation of an auxiliary tables
+#     needed in many testcases
+#------------------------------------------------------------------------

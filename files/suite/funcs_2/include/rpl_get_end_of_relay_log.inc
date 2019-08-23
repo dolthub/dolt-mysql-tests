@@ -1,0 +1,1 @@
+../../../include/rpl_get_end_of_relay_log.inc

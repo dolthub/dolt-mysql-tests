@@ -1,0 +1,1 @@
+../../../include/delete_anonymous_users.inc

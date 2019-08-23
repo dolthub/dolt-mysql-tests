@@ -1,0 +1,1 @@
+../../../include/have_clone_plugin.inc

@@ -1,0 +1,1 @@
+../../../include/show_master_status.inc

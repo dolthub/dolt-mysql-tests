@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/binlog_unsafe_commit_parent.inc

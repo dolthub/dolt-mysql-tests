@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/mysqlbinlog_row_engine.inc

@@ -1,0 +1,3 @@
+select @@global.performance_schema_max_socket_instances;
+@@performance_schema_max_socket_instances
+NULL

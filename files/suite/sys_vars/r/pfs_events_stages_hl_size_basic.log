@@ -1,0 +1,3 @@
+select @@global.performance_schema_events_stages_history_long_size;
+@@performance_schema_events_stages_history_long_size
+NULL

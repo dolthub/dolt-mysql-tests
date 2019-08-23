@@ -1,0 +1,1 @@
+../../../include/start_and_bootstrap_group_replication.inc

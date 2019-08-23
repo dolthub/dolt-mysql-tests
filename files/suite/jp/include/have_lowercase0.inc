@@ -1,0 +1,1 @@
+../../../include/have_lowercase0.inc

@@ -1,0 +1,1 @@
+../../../include/rpl_set_gtid_mode.inc

@@ -1,0 +1,1 @@
+../../../include/wait_condition_or_abort.inc

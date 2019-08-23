@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/logical_timestamping.inc

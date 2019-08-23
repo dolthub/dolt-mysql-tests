@@ -1,0 +1,5 @@
+SELECT @@session.show_create_table_verbosity;
+@@show_create_table_verbosity
+NULL
+SHOW SESSION VARIABLES LIKE 'show_create_table_verbosity';
+Variable_name	Value

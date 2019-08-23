@@ -1,0 +1,1 @@
+../../../include/kill_wait_for_executed_gtid_set.inc

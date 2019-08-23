@@ -1,0 +1,4 @@
+# Bug#47699 rpl.rpl_backup_block fails sporadically
+#
+# START SLAVE released the lock and returned before it cleared the error,
+# so there is a possibility that Slave_SQL_Error is not 0.

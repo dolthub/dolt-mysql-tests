@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_check_ps_applier_status_by_worker_slave_skip_counter.inc

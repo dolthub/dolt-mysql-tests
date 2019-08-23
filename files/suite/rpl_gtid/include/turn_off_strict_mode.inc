@@ -1,0 +1,1 @@
+../../../include/turn_off_strict_mode.inc

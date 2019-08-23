@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_replication_observers_example_plugin_server_startup.inc

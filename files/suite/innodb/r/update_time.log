@@ -1,0 +1,4 @@
+#
+# Test that INFORMATION_SCHEMA.TABLES.UPDATE_TIME is filled
+# correctly for InnoDB tables.
+#

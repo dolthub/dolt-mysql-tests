@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_timestamps_line_topology.inc

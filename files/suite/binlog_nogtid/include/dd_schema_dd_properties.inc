@@ -1,0 +1,1 @@
+../../../include/dd_schema_dd_properties.inc

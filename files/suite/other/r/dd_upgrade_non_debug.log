@@ -1,0 +1,7 @@
+#
+# Bug#26431355 : ALTER TABLE COMMENT FAILS WITH FAILED TO DROP TABLE SDI AFTER UPGRADE
+#
+# This test scripts covers upgrade of tables, views, tablespaces,
+# events, stored routines and triggers from 5.7 to 8.0.
+# Set different paths for --datadir
+# Copy the remote tablespace & DB zip files from suite location to working location.

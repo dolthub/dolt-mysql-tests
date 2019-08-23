@@ -1,0 +1,1 @@
+../../../include/gr_parallel_local_and_remote_transactions.inc

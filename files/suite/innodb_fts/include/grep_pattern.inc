@@ -1,0 +1,1 @@
+../../../include/grep_pattern.inc

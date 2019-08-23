@@ -1,0 +1,4 @@
+#
+# WL#9451 -- Backup Log
+#
+include/master-slave.inc

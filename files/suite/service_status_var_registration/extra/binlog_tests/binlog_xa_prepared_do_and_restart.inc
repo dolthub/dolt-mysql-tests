@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/binlog_xa_prepared_do_and_restart.inc

@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_change_master_bind.inc

@@ -1,0 +1,20 @@
+Testing NDB algorithm
+NDB is almost the same as NDB, except that:
+- The Primary / Secondary roles are controlled by a server variable
+- Secondary I/U/D ops are 'reflected' back to the Secondary to handle
+the delete vs delete limitations of NDB
+
+This testcase provides some regression coverage w.r.t. NDB, by
+running many of the same tests on NDB, but also switching
+the cluster roles.
+The main result differences w.r.t ndb_rpl_conflict_epoch.result are :
+- Result file has 2 passes for different roles
+- Master and Local server ids swapped in second run
+- Delete-Delete-Insert (case 8) shows no divergence
+
+Prior to including the generic NDB test files, we setup the
+conflict role variables
+Setup connections for use in this file
+First we have Cluster A as Primary, Cluster B as Secondary
+SET GLOBAL ndb_slave_conflict_role="PRIMARY";
+SET GLOBAL ndb_slave_conflict_role="SECONDARY";

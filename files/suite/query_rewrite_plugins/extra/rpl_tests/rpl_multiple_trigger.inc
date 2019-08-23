@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_multiple_trigger.inc

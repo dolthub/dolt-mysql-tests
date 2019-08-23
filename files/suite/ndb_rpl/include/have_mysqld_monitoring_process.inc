@@ -1,0 +1,1 @@
+../../../include/have_mysqld_monitoring_process.inc

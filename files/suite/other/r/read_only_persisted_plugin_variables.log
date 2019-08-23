@@ -1,0 +1,5 @@
+#
+# WL#9787: Allow SET PERSIST to set read-only variables too
+# Extended Test case to cover all the static server variables including
+# plugin variables.
+#

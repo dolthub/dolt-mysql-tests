@@ -1,0 +1,1 @@
+../../../include/kill_at_sync_point.inc

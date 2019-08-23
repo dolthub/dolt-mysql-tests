@@ -1,0 +1,1 @@
+../../../include/not_ndb_default.inc

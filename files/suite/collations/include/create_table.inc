@@ -1,0 +1,1 @@
+../../../include/create_table.inc

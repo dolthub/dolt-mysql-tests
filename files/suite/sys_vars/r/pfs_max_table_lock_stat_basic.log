@@ -1,0 +1,3 @@
+select @@global.performance_schema_max_table_lock_stat;
+@@performance_schema_max_table_lock_stat
+NULL

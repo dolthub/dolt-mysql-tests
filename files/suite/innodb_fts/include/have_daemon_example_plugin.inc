@@ -1,0 +1,1 @@
+../../../include/have_daemon_example_plugin.inc

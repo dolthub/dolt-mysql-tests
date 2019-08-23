@@ -1,0 +1,1 @@
+../../../include/get_mysqlbinlog_decoded_rows.inc

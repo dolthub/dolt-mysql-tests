@@ -1,0 +1,1 @@
+../../../include/wait_for_binlog_event.inc

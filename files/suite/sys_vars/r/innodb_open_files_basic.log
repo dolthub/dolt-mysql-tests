@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_038_01----------------------#'
+SELECT COUNT(@@GLOBAL.innodb_open_files);
+COUNT(@@GLOBAL.innodb_open_files)
+0
+1 Expected
+'#---------------------BS_STVARS_038_02----------------------#'

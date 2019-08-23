@@ -1,0 +1,1 @@
+../../../include/only_mts_slave_parallel_type_database.inc

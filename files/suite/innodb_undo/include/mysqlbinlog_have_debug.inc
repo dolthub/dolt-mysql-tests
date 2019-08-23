@@ -1,0 +1,1 @@
+../../../include/mysqlbinlog_have_debug.inc

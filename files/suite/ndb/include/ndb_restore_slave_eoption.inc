@@ -1,0 +1,1 @@
+../../../include/ndb_restore_slave_eoption.inc

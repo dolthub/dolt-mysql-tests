@@ -1,0 +1,1 @@
+../../../include/not_group_replication_plugin.inc

@@ -1,0 +1,1 @@
+../../../include/clean_group_replication_install_entry.inc

@@ -1,0 +1,3 @@
+#
+# Test of stored procedures. Queries within them will not be rewritten.
+#

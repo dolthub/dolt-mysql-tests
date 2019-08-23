@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_sync_relay_log_info.inc

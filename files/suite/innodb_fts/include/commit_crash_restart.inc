@@ -1,0 +1,1 @@
+../../../include/commit_crash_restart.inc

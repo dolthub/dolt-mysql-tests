@@ -1,0 +1,1 @@
+../../../include/wait_innodb_all_purged.inc

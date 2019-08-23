@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_004_01----------------------#'
+SELECT COUNT(@@GLOBAL.server_uuid);
+COUNT(@@GLOBAL.server_uuid)
+0
+1 Expected
+'#---------------------BS_STVARS_004_02----------------------#'

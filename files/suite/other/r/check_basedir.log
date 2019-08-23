@@ -1,0 +1,12 @@
+#
+# Test that --basedir, --lc-messages-dir, --character-sets-dir
+# and --plugin-dir are deduced correctly from the location of
+# mysqld executable.
+#
+# Note that deduction of --character-sets-dir and --plugin-dir does
+# not currently work correctly when running from a sandbox build dir,
+# (the expected string is printed anyway to avoid diffs).
+#
+#
+# Deduce --basedir when using full path to mysqld
+#

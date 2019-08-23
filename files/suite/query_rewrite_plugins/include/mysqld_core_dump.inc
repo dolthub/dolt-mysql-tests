@@ -1,0 +1,1 @@
+../../../include/mysqld_core_dump.inc

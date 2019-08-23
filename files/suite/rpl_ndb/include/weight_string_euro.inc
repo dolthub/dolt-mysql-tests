@@ -1,0 +1,1 @@
+../../../include/weight_string_euro.inc

@@ -1,0 +1,3 @@
+select @@global.performance_schema_accounts_size;
+@@performance_schema_accounts_size
+NULL

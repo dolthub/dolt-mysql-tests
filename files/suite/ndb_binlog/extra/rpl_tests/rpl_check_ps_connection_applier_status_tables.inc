@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_check_ps_connection_applier_status_tables.inc

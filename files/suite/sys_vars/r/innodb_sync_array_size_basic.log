@@ -1,0 +1,7 @@
+Valid values are between 0 and 1024
+SELECT @@global.innodb_sync_array_size between 0 and 1024;
+@@innodb_sync_array_size BETWEEN 0 AND 1024
+NULL
+SELECT @@global.innodb_sync_array_size;
+@@innodb_sync_array_size
+NULL

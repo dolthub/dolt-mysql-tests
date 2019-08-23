@@ -1,0 +1,4 @@
+#
+# Test of recovery. We load some rewrite rule and restart the server.
+# The rewrite rule should now be loaded.
+#

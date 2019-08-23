@@ -1,0 +1,4 @@
+#
+# Bug #47453: InnoDB incorrectly changes TIMESTAMP columns when
+#  JOINed during an UPDATE
+#

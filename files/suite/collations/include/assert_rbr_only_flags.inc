@@ -1,0 +1,1 @@
+../../../include/assert_rbr_only_flags.inc

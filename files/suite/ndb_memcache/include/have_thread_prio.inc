@@ -1,0 +1,1 @@
+../../../include/have_thread_prio.inc

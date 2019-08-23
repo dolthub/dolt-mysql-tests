@@ -1,0 +1,8 @@
+#
+# Testing mysql_config_editor utility.
+#
+################################################
+# Tests for mysql_config_editor's insert command
+################################################
+#
+# Default login path (client)

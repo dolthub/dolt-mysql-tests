@@ -1,0 +1,1 @@
+../../../include/have_innodb_default_undo_tablespaces.inc

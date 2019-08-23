@@ -1,0 +1,1 @@
+../../../include/rpl_get_log_encryption_key_id.inc

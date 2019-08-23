@@ -1,0 +1,3 @@
+#
+# Test recovery when a crash happens during undo tablespace DDL.
+#

@@ -1,0 +1,1 @@
+../../../include/stop_slave_sql.inc

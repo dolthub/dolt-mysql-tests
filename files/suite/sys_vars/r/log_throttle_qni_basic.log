@@ -1,0 +1,17 @@
+SET @start_value= @@global.log_throttle_queries_not_using_indexes;
+SET @@global.log_throttle_queries_not_using_indexes= DEFAULT;
+SELECT @@global.log_throttle_queries_not_using_indexes;
+@@log_throttle_queries_not_using_indexes
+NULL
+SET @@global.log_throttle_queries_not_using_indexes= 1000;
+SELECT @@global.log_throttle_queries_not_using_indexes;
+@@log_throttle_queries_not_using_indexes
+1000
+SET @@global.log_throttle_queries_not_using_indexes= -1;
+SELECT @@global.log_throttle_queries_not_using_indexes;
+@@log_throttle_queries_not_using_indexes
+-1
+SET @@global.log_throttle_queries_not_using_indexes= 5;
+SELECT @@global.log_throttle_queries_not_using_indexes;
+@@log_throttle_queries_not_using_indexes
+5

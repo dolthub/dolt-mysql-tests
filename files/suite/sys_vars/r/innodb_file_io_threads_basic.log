@@ -1,0 +1,10 @@
+'#---------------------BS_STVARS_027_01----------------------#'
+SELECT COUNT(@@GLOBAL.innodb_read_io_threads);
+COUNT(@@GLOBAL.innodb_read_io_threads)
+0
+1 Expected
+SELECT COUNT(@@GLOBAL.innodb_write_io_threads);
+COUNT(@@GLOBAL.innodb_write_io_threads)
+0
+1 Expected
+'#---------------------BS_STVARS_027_02----------------------#'

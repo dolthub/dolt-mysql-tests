@@ -1,0 +1,7 @@
+########################################################################
+# Bug#29491749: DATA DICTIONARY UPGRADE FAILING WITH ENCRYPTED MYSQL
+# TABLESPACE
+#
+# Verify that we can upgrade from a server with an encrypted mysql
+# tablespace.
+########################################################################

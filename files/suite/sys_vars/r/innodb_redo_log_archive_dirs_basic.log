@@ -1,0 +1,48 @@
+SET @innodb_redo_log_archive_dirs_sav= @@global.innodb_redo_log_archive_dirs;
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+NULL
+SET @@global.innodb_redo_log_archive_dirs="label1:/dir1";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+label1:/dir1
+SET @@global.innodb_redo_log_archive_dirs="label1:/dir1;label2:dir2";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+label1:/dir1;label2:dir2
+SET @@global.innodb_redo_log_archive_dirs="label1:/dir1;";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+label1:/dir1;
+SET @@global.innodb_redo_log_archive_dirs="label1:dir1;label2:/dir2;";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+label1:dir1;label2:/dir2;
+SET @@global.innodb_redo_log_archive_dirs=":/dir1";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+:/dir1
+SET @@global.innodb_redo_log_archive_dirs=":dir1;:dir1";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+:dir1;:dir1
+SET @@global.innodb_redo_log_archive_dirs=";;;:/dir1";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+;;;:/dir1
+SET @@global.innodb_redo_log_archive_dirs="label::::";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+label::::
+SET @@global.innodb_redo_log_archive_dirs=";;;::::;;;;::::;";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+;;;::::;;;;::::;
+SET @@global.innodb_redo_log_archive_dirs="";
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+
+SET @@global.innodb_redo_log_archive_dirs=NULL;
+SELECT @@global.innodb_redo_log_archive_dirs;
+@@innodb_redo_log_archive_dirs
+NULL

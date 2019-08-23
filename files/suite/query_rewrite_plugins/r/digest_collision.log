@@ -1,0 +1,4 @@
+#
+# Test of the case when two rewrite rule pattern have the same digest.
+#
+SET sql_mode = concat ( @@sql_mode, ',PIPES_AS_CONCAT' );

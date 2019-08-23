@@ -1,0 +1,1 @@
+../../../include/have_mysql_no_login_plugin.inc

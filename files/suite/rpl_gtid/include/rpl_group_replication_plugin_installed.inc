@@ -1,0 +1,1 @@
+../../../include/rpl_group_replication_plugin_installed.inc

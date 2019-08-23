@@ -1,0 +1,1 @@
+../../../include/wait_for_semisync_master_status_on.inc

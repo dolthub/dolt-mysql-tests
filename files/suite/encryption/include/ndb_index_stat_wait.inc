@@ -1,0 +1,1 @@
+../../../include/ndb_index_stat_wait.inc

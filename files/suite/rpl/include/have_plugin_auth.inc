@@ -1,0 +1,1 @@
+../../../include/have_plugin_auth.inc

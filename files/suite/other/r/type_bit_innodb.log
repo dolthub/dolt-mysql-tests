@@ -1,0 +1,36 @@
+select 0 + b'1';
+0 + true
+1
+select 0 + b'0';
+0 + false
+0
+select 0 + b'000001';
+0 + false
+0
+select 0 + b'000011';
+0 + false
+0
+select 0 + b'000101';
+0 + false
+0
+select 0 + b'000000';
+0 + false
+0
+select 0 + b'10000000';
+0 + true
+1
+select 0 + b'11111111';
+0 + true
+1
+select 0 + b'10000001';
+0 + true
+1
+select 0 + b'1000000000000000';
+0 + true
+1
+select 0 + b'1111111111111111';
+0 + true
+1
+select 0 + b'1000000000000001';
+0 + true
+1

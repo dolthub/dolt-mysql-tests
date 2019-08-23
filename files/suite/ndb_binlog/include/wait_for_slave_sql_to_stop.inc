@@ -1,0 +1,1 @@
+../../../include/wait_for_slave_sql_to_stop.inc

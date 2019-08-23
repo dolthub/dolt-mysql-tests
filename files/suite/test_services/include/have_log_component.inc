@@ -1,0 +1,1 @@
+../../../include/have_log_component.inc

@@ -1,0 +1,1 @@
+../../../include/restore_strict_mode.inc

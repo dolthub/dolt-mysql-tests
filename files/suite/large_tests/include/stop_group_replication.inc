@@ -1,0 +1,1 @@
+../../../include/stop_group_replication.inc

@@ -1,0 +1,1 @@
+../../../include/assert_binlog_events.inc

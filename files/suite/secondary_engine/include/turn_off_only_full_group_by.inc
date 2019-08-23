@@ -1,0 +1,1 @@
+../../../include/turn_off_only_full_group_by.inc

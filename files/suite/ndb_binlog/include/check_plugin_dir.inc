@@ -1,0 +1,1 @@
+../../../include/check_plugin_dir.inc

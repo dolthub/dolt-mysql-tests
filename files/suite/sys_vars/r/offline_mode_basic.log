@@ -1,0 +1,8 @@
+#
+# Variable name : offline_mode
+# Scope         : Global
+#
+# Global - default
+SELECT @@global.offline_mode;
+@@offline_mode
+NULL

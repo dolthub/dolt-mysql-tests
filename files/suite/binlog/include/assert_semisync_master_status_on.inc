@@ -1,0 +1,1 @@
+../../../include/assert_semisync_master_status_on.inc

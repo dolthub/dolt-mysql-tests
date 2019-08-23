@@ -1,0 +1,10 @@
+#
+# Bug 35333 "If a Federated table can't connect to the remote hose, can't retrieve metadata"
+#
+# Queries such as SHOW TABLE STATUS and SELECT * FROM INFORMATION_SCHEMA.TABLES fail
+# when encountering a federated table that cannot connect to its remote table.
+#
+# The fix is to store the error text in the TABLE COMMENTS column of I_S.TABLES, clear
+# the remote connection error and push a warning instead. This allows the SELECT operation
+# to complete while still indicating a problem. This fix applies to any non-fatal system
+# error that occurs during a query against I_S.TABLES.de

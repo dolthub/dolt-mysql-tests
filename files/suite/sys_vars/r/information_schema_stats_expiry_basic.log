@@ -1,0 +1,36 @@
+SET @@global.information_schema_stats_expiry = DEFAULT;
+SELECT @@global.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+NULL
+SET @@session.information_schema_stats_expiry = DEFAULT;
+SELECT @@session.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+NULL
+SET @@global.information_schema_stats_expiry= 0;
+SELECT @@global.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+0
+SET @@global.information_schema_stats_expiry = 31536000;
+SELECT @@global.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+31536000
+SET @@session.information_schema_stats_expiry =6000;
+SELECT @@session.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+6000
+SET @@global.information_schema_stats_expiry = 0;
+SELECT @@global.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+0
+SET @@global.information_schema_stats_expiry = -1024;
+SELECT @@global.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+-1024
+SET @@global.information_schema_stats_expiry = 123456789031;
+SELECT @@global.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+123456789031
+SET @@global.information_schema_stats_expiry = 31536003;
+SELECT @@global.information_schema_stats_expiry;
+@@information_schema_stats_expiry
+31536003

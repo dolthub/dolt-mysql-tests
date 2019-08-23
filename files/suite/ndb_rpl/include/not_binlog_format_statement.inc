@@ -1,0 +1,1 @@
+../../../include/not_binlog_format_statement.inc

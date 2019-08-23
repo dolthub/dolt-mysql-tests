@@ -1,0 +1,1 @@
+../../../include/have_innodb_min_8k.inc

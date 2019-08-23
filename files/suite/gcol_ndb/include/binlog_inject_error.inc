@@ -1,0 +1,1 @@
+../../../include/binlog_inject_error.inc

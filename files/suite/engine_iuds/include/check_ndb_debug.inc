@@ -1,0 +1,1 @@
+../../../include/check_ndb_debug.inc

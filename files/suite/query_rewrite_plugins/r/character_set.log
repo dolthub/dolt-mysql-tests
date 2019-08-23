@@ -1,0 +1,4 @@
+#
+# Tests that the character set setting is properly picked up by the
+# session that reads the rules table.
+#

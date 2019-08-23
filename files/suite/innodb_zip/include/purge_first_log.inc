@@ -1,0 +1,1 @@
+../../../include/purge_first_log.inc

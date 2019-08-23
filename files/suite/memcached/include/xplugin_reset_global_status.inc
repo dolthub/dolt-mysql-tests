@@ -1,0 +1,1 @@
+../../../include/xplugin_reset_global_status.inc

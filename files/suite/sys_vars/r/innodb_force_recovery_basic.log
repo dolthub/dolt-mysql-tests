@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_030_01----------------------#'
+SELECT COUNT(@@GLOBAL.innodb_force_recovery);
+COUNT(@@GLOBAL.innodb_force_recovery)
+0
+1 Expected
+'#---------------------BS_STVARS_030_02----------------------#'

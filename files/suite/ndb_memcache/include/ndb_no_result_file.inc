@@ -1,0 +1,1 @@
+../../../include/ndb_no_result_file.inc

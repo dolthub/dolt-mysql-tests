@@ -1,0 +1,1 @@
+../../../include/have_validate_password_component.inc

@@ -1,0 +1,1 @@
+../../../../extra/rpl_tests/rpl_row_jsondiff_error_scenario.inc

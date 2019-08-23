@@ -1,0 +1,5 @@
+set @save_binlog_checksum= @@global.binlog_checksum;
+set @@global.binlog_checksum = default;
+select @@global.binlog_checksum as 'must be CRC32 by default';
+must be crc32 by default
+NULL

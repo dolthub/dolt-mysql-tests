@@ -1,0 +1,1 @@
+../../../include/check_dir_settings.inc

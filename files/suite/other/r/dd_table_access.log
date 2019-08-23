@@ -1,0 +1,7 @@
+#
+# WL#6391: Hide DD tables.
+#
+# Prohibit access to the DD tables from user submitted
+# SQL statements, but allow DD initialization to execute
+# such statements.
+#

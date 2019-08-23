@@ -1,0 +1,1 @@
+../../../include/force_binlog_format_statement.inc

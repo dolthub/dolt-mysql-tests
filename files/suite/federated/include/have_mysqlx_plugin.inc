@@ -1,0 +1,1 @@
+../../../include/have_mysqlx_plugin.inc

@@ -1,0 +1,1 @@
+../../../include/set_binlog_format_mixed.sql

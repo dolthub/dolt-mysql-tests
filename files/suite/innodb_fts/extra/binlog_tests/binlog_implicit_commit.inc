@@ -1,0 +1,1 @@
+../../../../extra/binlog_tests/binlog_implicit_commit.inc

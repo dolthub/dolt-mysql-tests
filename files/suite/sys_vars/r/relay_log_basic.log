@@ -1,0 +1,3 @@
+select @@global.relay_log;
+@@relay_log
+NULL

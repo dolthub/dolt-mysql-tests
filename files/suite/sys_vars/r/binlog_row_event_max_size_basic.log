@@ -1,0 +1,1 @@
+SET @start_value = @@global.binlog_row_event_max_size;

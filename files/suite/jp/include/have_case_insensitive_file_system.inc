@@ -1,0 +1,1 @@
+../../../include/have_case_insensitive_file_system.inc

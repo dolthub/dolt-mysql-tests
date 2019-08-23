@@ -1,0 +1,3 @@
+#
+# Bug#34300 Tinyblob & tinytext fields currupted after export/import and alter in 5.1
+#

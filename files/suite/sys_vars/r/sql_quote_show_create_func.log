@@ -1,0 +1,3 @@
+** Setup **
+
+SET @default_sql_quote_show_create = @@sql_quote_show_create;
