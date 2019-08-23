@@ -12,6 +12,7 @@ pipeline {
                 DOLTHUBCRED = credentials("system-account-dolthub-creds")
                 DOLTHUBCONFIG = credentials("system-account-dolthub-config")
                 DOLTTESTLINKER = true
+                DTENABLEFILEOUTPUT = true
             }
             steps {
                 dir ("") {

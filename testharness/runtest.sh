@@ -9,11 +9,11 @@ function onExit() {
 }
 trap onExit EXIT
 
-DOLTTESTRESULTOUT="output/results.txt"
-DOLTTESTDETAILOUT="output/details.txt"
-if [ "$DTDISABLEFILEOUTPUT" = true ]; then
-  DOLTTESTRESULTOUT="/dev/tty"
-  DOLTTESTDETAILOUT="/dev/tty"
+DOLTTESTRESULTOUT="/dev/tty"
+DOLTTESTDETAILOUT="/dev/tty"
+if [ "$DTENABLEFILEOUTPUT" = true ]; then
+  DOLTTESTRESULTOUT="output/results.txt"
+  DOLTTESTDETAILOUT="output/details.txt"
 else
   if [ -d output/ ]; then
     rm -rf output
