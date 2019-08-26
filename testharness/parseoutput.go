@@ -33,6 +33,7 @@ type TestResult struct {
 	ElapsedSeconds int64  `json:"elapsed_seconds"`
 	Info           string `json:"details,omitempty"`
 	Reject         string `json:"reject,omitempty"`
+	Log            string `json:"log,omitempty"`
 }
 
 type TestResultArray struct {
@@ -89,6 +90,13 @@ func main() {
 			rejectFileName := "../output/reject/" + state.TestResult.Name + ".reject"
 			if FileExists(rejectFileName) {
 				state.TestResult.Reject, err = ReadFile(rejectFileName)
+				if err != nil {
+					log.Fatal(err)
+				}
+			}
+			logFileName := "../output/log/" + state.TestResult.Name + ".log"
+			if FileExists(logFileName) {
+				state.TestResult.Log, err = ReadFile(logFileName)
 				if err != nil {
 					log.Fatal(err)
 				}
