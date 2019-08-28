@@ -1,4 +1,4 @@
- #!/bin/bash
+#!/bin/bash
 
 if [ -d lib/ ]; then
   cd ..
@@ -6,8 +6,8 @@ fi
 
 CREATEDTESTDOLTDIR="$PWD/files/.dolt"
 function onExit() {
-  kill $DOLTPID
-  rm -rf $CREATEDTESTDOLTDIR
+  kill "$DOLTPID"
+  rm -rf "$CREATEDTESTDOLTDIR"
 }
 trap onExit EXIT
 
