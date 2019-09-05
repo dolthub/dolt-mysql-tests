@@ -81,11 +81,11 @@ function runTest() {
   echo "End:------- $SUITENAME/$TESTNAME" >&2
 }
 
+TESTCOUNTER=0
 cd files/suite
 for TOPLEVEL in */; do
   TOPLEVEL="${TOPLEVEL%/}"
   cd $TOPLEVEL
-  TESTCOUNTER=0
   for TEST in t/*.test; do
     TESTWITHT="${TEST%.*}"
     TESTWITHOUTT="${TESTWITHT:2}"
