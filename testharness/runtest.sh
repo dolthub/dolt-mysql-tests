@@ -4,18 +4,21 @@ if [ -d lib/ ]; then
   cd ..
 fi
 
+FILESDIR="$PWD/files"
 CREATEDTESTDOLTDIR="$PWD/files/.dolt"
-function onExit() {
-  kill "$DOLTPID"
+function removeTempDolt() {
+  if [ -n "$DOLTPID" ]; then
+    kill "$DOLTPID" >/dev/null
+  fi
   rm -rf "$CREATEDTESTDOLTDIR"
 }
-trap onExit EXIT
+trap removeTempDolt EXIT
 
 DOLTTESTRESULTOUT="/dev/tty"
 DOLTTESTDETAILOUT="/dev/tty"
 if [ "$DTENABLEFILEOUTPUT" = true ]; then
-  DOLTTESTRESULTOUT="output/results.txt"
-  DOLTTESTDETAILOUT="output/details.txt"
+  DOLTTESTRESULTOUT="$PWD/output/results.txt"
+  DOLTTESTDETAILOUT="$PWD/output/details.txt"
 fi
 
 if [ -d output/ ]; then
@@ -23,9 +26,9 @@ if [ -d output/ ]; then
 fi
 mkdir output
 
-MYSQLTEST="$PWD/testharness/mysqltest"
+MYSQLTEST="timeout -k 1m 5m $PWD/testharness/mysqltest"
 if [ "$DOLTTESTLINKER" = true ]; then
-  MYSQLTEST="$PWD/testharness/lib/ld-linux-x86-64.so.2 --library-path $PWD/testharness/lib $PWD/testharness/mysqltest"
+  MYSQLTEST="timeout -k 1m 5m $PWD/testharness/lib/ld-linux-x86-64.so.2 --library-path $PWD/testharness/lib $PWD/testharness/mysqltest"
 fi
 
 ARG1="$1"
@@ -38,21 +41,23 @@ fi
 
 { # Redirect all output contained in this block to files
 
-cd files
-if [ ! -d .dolt/ ]; then
+function startDoltServer() {
+  pushd $FILESDIR >/dev/null
+  removeTempDolt
   dolt init >/dev/null
-fi
-jobs &>/dev/null
-dolt sql-server -H 127.0.0.1 -P 9091 -u root &
-NEWJOBSTARTED="$(jobs -n)"
-if [ -n "$NEWJOBSTARTED" ]; then
-  DOLTPID=$!
-else
-  DOLTPID=
-fi
-cd ..
+  jobs &>/dev/null
+  dolt sql-server -H 127.0.0.1 -P 9091 -u root &
+  NEWJOBSTARTED="$(jobs -n)"
+  if [ -n "$NEWJOBSTARTED" ]; then
+    DOLTPID=$!
+  else
+    DOLTPID=
+  fi
+  popd >/dev/null
+}
 
 function runTest() {
+  startDoltServer
   SUITENAME="$1"
   TESTNAME="$2"
   if [ "$DTENABLEFILEOUTPUT" = true ]; then
@@ -64,6 +69,15 @@ function runTest() {
   else
     $MYSQLTEST -h 127.0.0.1 -P 9091 -u root -x $PWD/t/$TESTNAME.test
   fi
+  if [ "$DTENABLEFILEOUTPUT" = true ]; then
+    LASTLINEWRITTEN=`cat $DOLTTESTRESULTOUT | tail -n 1`
+    if [ -n "$LASTLINEWRITTEN" ]; then
+      STATUSLASTLINEWRITTEN="${LASTLINEWRITTEN#*:}"
+      if [ -z "$STATUSLASTLINEWRITTEN" ]; then
+        echo "not ok"
+      fi
+    fi
+  fi
   echo "End:------- $SUITENAME/$TESTNAME" >&2
 }
 
@@ -71,6 +85,7 @@ cd files/suite
 for TOPLEVEL in */; do
   TOPLEVEL="${TOPLEVEL%/}"
   cd $TOPLEVEL
+  TESTCOUNTER=0
   for TEST in t/*.test; do
     TESTWITHT="${TEST%.*}"
     TESTWITHOUTT="${TESTWITHT:2}"
@@ -80,6 +95,10 @@ for TOPLEVEL in */; do
       fi
     else
       runTest "$TOPLEVEL" "$TESTWITHOUTT"
+    fi
+    TESTCOUNTER=$((TESTCOUNTER+1))
+    if [ $((TESTCOUNTER % 100)) -eq 0 ] && [ "$DTENABLEFILEOUTPUT" = true ]; then
+      echo "`date -u`: Finished $TESTCOUNTER tests" >/dev/tty
     fi
   done
 
