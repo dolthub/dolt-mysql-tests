@@ -14,7 +14,7 @@ The MySQL test binary that was compiled under Ubuntu 19.04 64-bit. The accompany
 
 ## parseoutput.go
 
-A Go project that reads the output of the generated **output** folder (along with **currentdolt.txt**) and outputs a JSON file named **doltvals.json**. This file is then used in our testing process to update [our results table](https://beta.dolthub.com/repositories/Liquidata/mysql-integration-tests) for tracking progress. It is required that **currentdolt.txt** exists in **testharness** before running, and for the purposes of local testing, you may create your own file with `echo -n "SOME_COMMIT_HASH" > currentdolt.txt`, replacing `SOME_COMMIT_HASH` with the relevant hash of [Dolt](https://github.com/liquidata-inc/dolt). It is not required to build this file before running, and thus may be run with the command `go run parseoutput.go`.
+A Go project that reads the output of the generated **output** folder (along with **currentdolt.txt**) and outputs a JSON file named **doltvals.json**. This file is then used in our testing process to update [our results table](https://www.dolthub.com/repositories/Liquidata/mysql-integration-tests) for tracking progress. It is required that **currentdolt.txt** exists in **testharness** before running, and for the purposes of local testing, you may create your own file with `echo -n "SOME_COMMIT_HASH" > currentdolt.txt`, replacing `SOME_COMMIT_HASH` with the relevant hash of [Dolt](https://github.com/liquidata-inc/dolt). It is not required to build this file before running, and thus may be run with the command `go run parseoutput.go`.
 
 ## runtest.sh
 
@@ -28,7 +28,7 @@ If the environment variable `DOLTTESTLINKER` is set to `true`, then the script w
 
 ## setuprepo.sh
 
-Turns **testharness** into a [Dolt](https://github.com/liquidata-inc/dolt) directory and clones the latest results from the [Liquidata repository](https://beta.dolthub.com/repositories/Liquidata/mysql-integration-tests) into it. It then grabs the latest commit from the repository itself and writes it to **previousdolt.txt**. **currentdolt.txt** and **previousdolt.txt** are then compared for equivalence, and exits with code 3 if they are. This is used by our Jenkins script to skip redundant runs. This script is only intended to be run from the test machines.
+Turns **testharness** into a [Dolt](https://github.com/liquidata-inc/dolt) directory and clones the latest results from the [Liquidata repository](https://www.dolthub.com/repositories/Liquidata/mysql-integration-tests) into it. It then grabs the latest commit from the repository itself and writes it to **previousdolt.txt**. **currentdolt.txt** and **previousdolt.txt** are then compared for equivalence, and exits with code 3 if they are. This is used by our Jenkins script to skip redundant runs. This script is only intended to be run from the test machines.
 
 ## updaterepo.sh
 
