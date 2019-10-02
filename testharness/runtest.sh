@@ -6,9 +6,11 @@ fi
 
 FILESDIR="$PWD/files"
 CREATEDTESTDOLTDIR="$PWD/files/.dolt"
+
+doltPid="" # global, used for cleanup
 function removeTempDolt() {
-  if [ -n "$DOLTPID" ]; then
-    kill "$DOLTPID" >/dev/null
+  if [ -n "$doltPid" ]; then
+    kill "$doltPid" >/dev/null
   fi
   rm -rf "$CREATEDTESTDOLTDIR"
 }
@@ -26,102 +28,128 @@ if [ -d output/ ]; then
 fi
 mkdir output
 
+# For local debugging, a much shorter timeout is more appropriate.
+#MYSQLTEST="timeout -k 5s 10s mysqltest --max-connect-retries=2"
 MYSQLTEST="timeout -k 1m 5m $PWD/testharness/mysqltest"
 if [ "$DOLTTESTLINKER" = true ]; then
   MYSQLTEST="timeout -k 1m 5m $PWD/testharness/lib/ld-linux-x86-64.so.2 --library-path $PWD/testharness/lib $PWD/testharness/mysqltest"
 fi
 
-ARG1="$1"
-ARG2="$2"
-if [ -n "$1" ] && [ -z "$2" ]; then
-  FULLSUITENAME="$1"
-  ARG1="${FULLSUITENAME%/*}"
-  ARG2="${FULLSUITENAME#*/}"
-fi
+suiteName="$1"
+testName="$2"
 
 { # Redirect all output contained in this block to files
 
+# Runs all the tests in a suite, which must be CWD.
+function runSuite() {
+    local suiteName="$1"
+    for test in t/*.test; do
+        testWithoutSuffix="${test%.*}"
+        testName="${testWithoutSuffix##*/}"
+        runTest "$suiteName" "$testName"
+        testCounter=$((testCounter+1))
+        if [ $((testCounter % 100)) -eq 0 ] && [ "$DTENABLEFILEOUTPUT" = true ]; then
+            echo "`date -u`: Finished $testCounter tests" >/dev/tty
+        fi
+    done
+}
+
 function startDoltServer() {
-  pushd $FILESDIR >/dev/null
-  removeTempDolt
-  dolt init >/dev/null
-  jobs &>/dev/null
-  dolt sql-server -H 127.0.0.1 -P 9091 -u root &
-  NEWJOBSTARTED="$(jobs -n)"
-  if [ -n "$NEWJOBSTARTED" ]; then
-    DOLTPID=$!
-  else
-    DOLTPID=
-  fi
-  popd >/dev/null
-}
-
-function runTest() {
-  startDoltServer
-  SUITENAME="$1"
-  TESTNAME="$2"
-  if [ "$DTENABLEFILEOUTPUT" = true ]; then
-    echo -n "$SUITENAME/$TESTNAME:"
-  fi
-  echo "Start:----- $SUITENAME/$TESTNAME" >&2
-  if [ -f $PWD/r/$TESTNAME.result ]; then
-    $MYSQLTEST -h 127.0.0.1 -P 9091 -u root -x $PWD/t/$TESTNAME.test -R $PWD/r/$TESTNAME.result
-  else
-    $MYSQLTEST -h 127.0.0.1 -P 9091 -u root -x $PWD/t/$TESTNAME.test
-  fi
-  if [ "$DTENABLEFILEOUTPUT" = true ]; then
-    LASTLINEWRITTEN=`cat $DOLTTESTRESULTOUT | tail -n 1`
-    if [ -n "$LASTLINEWRITTEN" ]; then
-      STATUSLASTLINEWRITTEN="${LASTLINEWRITTEN#*:}"
-      if [ -z "$STATUSLASTLINEWRITTEN" ]; then
-        echo "not ok"
-      fi
-    fi
-  fi
-  echo "End:------- $SUITENAME/$TESTNAME" >&2
-}
-
-TESTCOUNTER=0
-cd files/suite
-for TOPLEVEL in */; do
-  TOPLEVEL="${TOPLEVEL%/}"
-  cd $TOPLEVEL
-  for TEST in t/*.test; do
-    TESTWITHT="${TEST%.*}"
-    TESTWITHOUTT="${TESTWITHT:2}"
-    if [ -n "$ARG1" ]; then
-      if [ "$ARG1" == "$TOPLEVEL" ] && [ "$ARG2" == "$TESTWITHOUTT" ]; then
-        runTest "$TOPLEVEL" "$TESTWITHOUTT"
-      fi
+    pushd $FILESDIR >/dev/null
+    removeTempDolt
+    dolt init --name mysqltest --email mysqltests@test.com >/dev/null
+    jobs &>/dev/null
+    dolt sql-server -H 127.0.0.1 -P 9091 -u root &
+    newJobStarted="$(jobs -n)"
+    if [ -n "$newJobStarted" ]; then
+        doltPid=$!
     else
-      runTest "$TOPLEVEL" "$TESTWITHOUTT"
+        doltPid=
     fi
-    TESTCOUNTER=$((TESTCOUNTER+1))
-    if [ $((TESTCOUNTER % 100)) -eq 0 ] && [ "$DTENABLEFILEOUTPUT" = true ]; then
-      echo "`date -u`: Finished $TESTCOUNTER tests" >/dev/tty
-    fi
-  done
+    popd >/dev/null
+}
 
-  for REJECT in *.reject; do
-    if [ -f $REJECT ]; then
-      if [ ! -d "../../../output/reject/$TOPLEVEL" ]; then
-        mkdir -p "../../../output/reject/$TOPLEVEL/"
-      fi
-      mv $REJECT "../../../output/reject/$TOPLEVEL/$REJECT"
+# Runs a single test. Expects CWD to be the test suite directory.
+function runTest() {
+    startDoltServer
+    local suiteName="$1"
+    local testName="$2"
+    if [ "$DTENABLEFILEOUTPUT" = true ]; then
+        echo -n "$suiteName/$testName:"
     fi
-  done
+    echo "Start:----- $suiteName/$testName" >&2
+    if [ -f $PWD/r/$testName.result ]; then
+        $MYSQLTEST -h 127.0.0.1 -P 9091 -u root -x $PWD/t/$testName.test -R $PWD/r/$testName.result
+    else
+        $MYSQLTEST -h 127.0.0.1 -P 9091 -u root -x $PWD/t/$testName.test
+    fi
+    
+    if [ "$DTENABLEFILEOUTPUT" = true ]; then
+        lastLineWritten=`cat $DOLTTESTRESULTOUT | tail -n 1`
+        if [ -n "$lastLineWritten" ]; then
+            statusLastLineWritten="${lastLineWritten#*:}"
+            if [ -z "$stausLastLineWritten" ]; then
+                echo "not ok"
+            fi
+        fi
+    fi
+    
+    echo "End:------- $suiteName/$testName" >&2
 
-  cd r
-  for LOGFILE in *.log; do
-    if [ -f $LOGFILE ]; then
-      if [ ! -d "../../../../output/log/$TOPLEVEL" ]; then
-        mkdir -p "../../../../output/log/$TOPLEVEL/"
-      fi
-      mv $LOGFILE "../../../../output/log/$TOPLEVEL/$LOGFILE"
+    echo "Cleaning up logs and reject files"
+    cleanupRejects "$suiteName"
+    cleanupLogs "$suiteName"
+}
+
+# Cleans up .reject files in the current directory, moving them to the output/reject directory
+function cleanupRejects() {
+    local suite="$1"
+    for reject in *.reject; do
+        if [ -f $reject ]; then
+            if [ ! -d "../../../output/reject/$suite" ]; then
+                mkdir -p "../../../output/reject/$suite/"
+            fi
+            mv $reject "../../../output/reject/$suite/$reject"
+        fi
+    done
+}
+
+# Cleans up any .log files in $PWD/r by moving them to the output/log directory 
+function cleanupLogs() {
+    local suite="$1"
+    cd r
+    for logfile in *.log; do
+        if [ -f $logfile ]; then
+            if [ ! -d "../../../../output/log/$suite" ]; then
+                mkdir -p "../../../../output/log/$suite/"
+            fi
+            mv $logfile "../../../../output/log/$suite/$logfile"
+        fi
+    done
+    cd ..
+}
+
+testCounter=0
+cd files/suite
+
+if [ -n "$suiteName" ] && [ -d "$suiteName" ]; then
+    echo "Running suite $suiteName"
+    cd $suiteName
+    if [ -n "$testName" ] && [ -f "t/$testName.test" ]; then
+        echo "Running single test $testName"
+        runTest "$suiteName" "$testName"
+    else
+        echo "Running entire suite $suiteName"
+        runSuite "$suitName"
     fi
-  done
-  cd ../..
-done
-cd ../..
+else
+    echo "Running all suites"
+    for suite in */; do
+        suite="${suite%/}"
+        cd $suite
+        runSuite "$suite"
+        cd ..
+    done
+fi
 
 } 1>$DOLTTESTRESULTOUT 2>$DOLTTESTDETAILOUT # Output redirection target files
