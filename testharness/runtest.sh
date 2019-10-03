@@ -37,6 +37,13 @@ fi
 
 suiteName="$1"
 testName="$2"
+# Alternate test name declaration: suiteName/testName
+if [ -z "$testName"] && [[ $suiteName == *"/"* ]]; then
+    fullName="$suiteName"
+    suiteName="${fullName%/*}"
+    testName="${fullName#*/}"
+    exit
+fi
 
 { # Redirect all output contained in this block to files
 
