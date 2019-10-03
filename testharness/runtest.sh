@@ -29,8 +29,8 @@ fi
 mkdir output
 
 # For local debugging, a much shorter timeout is more appropriate.
-#MYSQLTEST="timeout -k 5s 10s mysqltest --max-connect-retries=2"
-MYSQLTEST="timeout -k 1m 5m $PWD/testharness/mysqltest"
+MYSQLTEST="timeout -k 5s 10s mysqltest --max-connect-retries=2"
+#MYSQLTEST="timeout -k 1m 5m $PWD/testharness/mysqltest"
 if [ "$DOLTTESTLINKER" = true ]; then
   MYSQLTEST="timeout -k 1m 5m $PWD/testharness/lib/ld-linux-x86-64.so.2 --library-path $PWD/testharness/lib $PWD/testharness/mysqltest"
 fi
@@ -77,7 +77,12 @@ function runTest() {
     if [ "$DTENABLEFILEOUTPUT" = true ]; then
         echo -n "$suiteName/$testName:"
     fi
+
     echo "Start:----- $suiteName/$testName" >&2
+
+    echo -n "StartTime:" >&2
+    date "+%s-%N" >&2
+    
     if [ -f $PWD/r/$testName.result ]; then
         $MYSQLTEST -h 127.0.0.1 -P 9091 -u root -x $PWD/t/$testName.test -R $PWD/r/$testName.result
     else
@@ -85,18 +90,20 @@ function runTest() {
     fi
     
     if [ "$DTENABLEFILEOUTPUT" = true ]; then
+        # For tests that timed out without writing a result, write "not ok"
         lastLineWritten=`cat $DOLTTESTRESULTOUT | tail -n 1`
         if [ -n "$lastLineWritten" ]; then
             statusLastLineWritten="${lastLineWritten#*:}"
-            if [ -z "$stausLastLineWritten" ]; then
+            if [ -z "$statusLastLineWritten" ]; then
                 echo "not ok"
             fi
         fi
     fi
     
+    echo -n "EndTime:" >&2
+    date "+%s-%N" >&2
     echo "End:------- $suiteName/$testName" >&2
 
-    echo "Cleaning up logs and reject files"
     cleanupRejects "$suiteName"
     cleanupLogs "$suiteName"
 }
@@ -133,17 +140,17 @@ testCounter=0
 cd files/suite
 
 if [ -n "$suiteName" ] && [ -d "$suiteName" ]; then
-    echo "Running suite $suiteName"
+    echo "Running suite $suiteName" > /dev/tty
     cd $suiteName
     if [ -n "$testName" ] && [ -f "t/$testName.test" ]; then
-        echo "Running single test $testName"
+        echo "Running single test $testName" > /dev/tty
         runTest "$suiteName" "$testName"
     else
-        echo "Running entire suite $suiteName"
+        echo "Running entire suite $suiteName" > /dev/tty
         runSuite "$suitName"
     fi
 else
-    echo "Running all suites"
+    echo "Running all suites" > /dev/tty
     for suite in */; do
         suite="${suite%/}"
         cd $suite
