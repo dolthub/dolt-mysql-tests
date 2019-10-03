@@ -29,8 +29,8 @@ fi
 mkdir output
 
 # For local debugging, a much shorter timeout is more appropriate.
-MYSQLTEST="timeout -k 5s 10s mysqltest --max-connect-retries=2"
-#MYSQLTEST="timeout -k 1m 5m $PWD/testharness/mysqltest"
+#MYSQLTEST="timeout -k 5s 10s mysqltest --max-connect-retries=2"
+MYSQLTEST="timeout -k 1m 5m $PWD/testharness/mysqltest"
 if [ "$DOLTTESTLINKER" = true ]; then
   MYSQLTEST="timeout -k 1m 5m $PWD/testharness/lib/ld-linux-x86-64.so.2 --library-path $PWD/testharness/lib $PWD/testharness/mysqltest"
 fi
@@ -42,7 +42,6 @@ if [ -z "$testName"] && [[ $suiteName == *"/"* ]]; then
     fullName="$suiteName"
     suiteName="${fullName%/*}"
     testName="${fullName#*/}"
-    exit
 fi
 
 { # Redirect all output contained in this block to files
@@ -149,9 +148,14 @@ cd files/suite
 if [ -n "$suiteName" ] && [ -d "$suiteName" ]; then
     echo "Running suite $suiteName" > /dev/tty
     cd $suiteName
-    if [ -n "$testName" ] && [ -f "t/$testName.test" ]; then
-        echo "Running single test $testName" > /dev/tty
-        runTest "$suiteName" "$testName"
+    if [ -n "$testName" ]; then
+        if [ -f "t/$testName.test" ]; then
+            echo "Running single test $testName" > /dev/tty
+            runTest "$suiteName" "$testName"
+        else
+            echo "No $testName.test found, exiting" > /dev/tty
+            exit
+        fi
     else
         echo "Running entire suite $suiteName" > /dev/tty
         runSuite "$suitName"
