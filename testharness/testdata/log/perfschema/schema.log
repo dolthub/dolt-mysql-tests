@@ -1,0 +1,3 @@
+show databases like 'performance_schema';
+Database
+dolt

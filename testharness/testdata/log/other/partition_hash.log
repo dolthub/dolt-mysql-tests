@@ -1,0 +1,5 @@
+drop table if exists t1;
+#
+# Bug#12725206/Bug#61765: WRONG QUERY RESULTS ON SUBPARTITIONS BASED
+#                         ON USIGNED BIGINT
+#

@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_039_01----------------------#'
+SELECT COUNT(@@GLOBAL.innodb_rollback_on_timeout);
+COUNT(@@GLOBAL.innodb_rollback_on_timeout)
+0
+1 Expected
+'#---------------------BS_STVARS_039_02----------------------#'

@@ -1,0 +1,2 @@
+drop table if exists abs;
+drop table if exists bug21114_child;

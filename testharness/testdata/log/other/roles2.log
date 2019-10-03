@@ -1,0 +1,2 @@
+set @orig_partial_revokes = @@global.partial_revokes;
+SET GLOBAL partial_revokes= OFF;

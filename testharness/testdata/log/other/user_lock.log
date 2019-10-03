@@ -1,0 +1,9 @@
+#
+# Coverage for GET_LOCK, RELEASE_LOCK, RELEASE_ALL_LOCKS,
+# IS_USED_LOCK and IS_FREE_LOCK functions.
+#
+# Tests for WL#1159 "Allow multiple locks in GET_LOCK()".
+#
+# FT-1: The current connection has no user-level lock aquired at all.
+#       There is no parallel connection holding the lock 'test'.
+# FT-1.1: IS_USED_LOCK returns NULL if the lock is unused.

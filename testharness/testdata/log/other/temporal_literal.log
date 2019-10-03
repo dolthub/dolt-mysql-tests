@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS t1, t2;
+SET NAMES latin1;
+SET sql_mode = 'NO_ENGINE_SUBSTITUTION';
+#
+# Testing DATE literals
+#

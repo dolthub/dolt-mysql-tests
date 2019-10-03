@@ -1,0 +1,4 @@
+SELECT COUNT(@@GLOBAL.mysqlx_ssl_capath);
+COUNT(@@GLOBAL.mysqlx_ssl_capath)
+0
+0 Expected

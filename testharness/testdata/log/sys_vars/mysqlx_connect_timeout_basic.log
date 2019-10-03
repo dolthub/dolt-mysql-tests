@@ -1,0 +1,6 @@
+SET @mysqlx_connect_timeout_sav= @@global.mysqlx_connect_timeout;
+SET GLOBAL mysqlx_connect_timeout=20;
+SET @@global.mysqlx_connect_timeout=500;
+show variables like 'mysqlx_connect_timeout';
+Variable_name	Value
+mysqlx_connect_timeout	500

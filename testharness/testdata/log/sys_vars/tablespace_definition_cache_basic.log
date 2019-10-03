@@ -1,0 +1,3 @@
+select @@global.tablespace_definition_cache;
+@@tablespace_definition_cache
+NULL

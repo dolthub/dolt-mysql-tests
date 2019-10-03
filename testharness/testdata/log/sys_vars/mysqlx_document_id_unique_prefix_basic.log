@@ -1,0 +1,10 @@
+SET @mysqlx_document_id_unique_prefix_sav= @@global.mysqlx_document_id_unique_prefix;
+SET GLOBAL mysqlx_document_id_unique_prefix=7;
+SET @@global.mysqlx_document_id_unique_prefix=7;
+show variables like 'mysqlx_document_id_unique_prefix';
+Variable_name	Value
+mysqlx_document_id_unique_prefix	7
+SET @@global.mysqlx_document_id_unique_prefix=3600;
+show variables like 'mysqlx_document_id_unique_prefix';
+Variable_name	Value
+mysqlx_document_id_unique_prefix	3600

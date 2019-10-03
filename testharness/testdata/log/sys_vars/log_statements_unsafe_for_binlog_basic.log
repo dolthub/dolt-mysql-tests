@@ -1,0 +1,22 @@
+SET @start_value= @@global.log_statements_unsafe_for_binlog;
+SET @@global.log_statements_unsafe_for_binlog= DEFAULT;
+SELECT @@global.log_statements_unsafe_for_binlog;
+@@log_statements_unsafe_for_binlog
+NULL
+SET @@global.log_statements_unsafe_for_binlog= TRUE;
+SELECT @@global.log_statements_unsafe_for_binlog;
+@@log_statements_unsafe_for_binlog
+1
+SET @@global.log_statements_unsafe_for_binlog= true;
+SELECT @@global.log_statements_unsafe_for_binlog;
+@@log_statements_unsafe_for_binlog
+1
+SET @@global.log_statements_unsafe_for_binlog= 0;
+SELECT @@global.log_statements_unsafe_for_binlog;
+@@log_statements_unsafe_for_binlog
+0
+SET @@global.log_statements_unsafe_for_binlog= 1;
+SELECT @@global.log_statements_unsafe_for_binlog;
+@@log_statements_unsafe_for_binlog
+1
+SET @goodvar= TRUE;

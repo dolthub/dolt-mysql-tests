@@ -1,0 +1,3 @@
+select @@global.relay_log_recovery;
+@@relay_log_recovery
+NULL

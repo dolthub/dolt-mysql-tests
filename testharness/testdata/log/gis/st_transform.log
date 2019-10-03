@@ -1,0 +1,4 @@
+#
+# NULL values.
+#
+# At least one NULL parameter. Should return NULL.

@@ -1,0 +1,1 @@
+SET @start_global_value = @@global.innodb_change_buffer_max_size;

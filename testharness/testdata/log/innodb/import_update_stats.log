@@ -1,0 +1,5 @@
+SET @old_innodb_file_per_table = @@innodb_file_per_table;
+SET GLOBAL innodb_file_per_table = 1;
+SELECT @@innodb_file_per_table;
+@@innodb_file_per_table
+1

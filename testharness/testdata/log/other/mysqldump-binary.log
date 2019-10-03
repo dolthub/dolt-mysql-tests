@@ -1,0 +1,1 @@
+# Bug#22601255 Restoring a dump of binary column, made with mysqldump, warns of invalid string

@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS tab2;
+SHOW variables like '%innodb_checksum_algorithm%';
+Variable_name	Value
+SELECT @@default_storage_engine;
+@@default_storage_engine
+NULL

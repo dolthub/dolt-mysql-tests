@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_010_01----------------------#'
+SELECT COUNT(@@GLOBAL.have_geometry);
+COUNT(@@GLOBAL.have_geometry)
+0
+1 Expected
+'#---------------------BS_STVARS_010_02----------------------#'

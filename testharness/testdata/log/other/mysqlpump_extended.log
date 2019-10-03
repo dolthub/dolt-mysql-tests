@@ -1,0 +1,6 @@
+#
+# WL#7755  mysqlpump: Extend mysqldump functionalities
+#
+#
+# Test all newly added mysqlpump options
+#

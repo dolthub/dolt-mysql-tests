@@ -1,0 +1,3 @@
+SELECT COUNT(@@GLOBAL.version_compile_zlib);
+COUNT(@@GLOBAL.version_compile_zlib)
+0

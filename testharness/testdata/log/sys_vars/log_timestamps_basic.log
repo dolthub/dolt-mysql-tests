@@ -1,0 +1,1 @@
+SET @old_log_timestamps     = @@global.log_timestamps;

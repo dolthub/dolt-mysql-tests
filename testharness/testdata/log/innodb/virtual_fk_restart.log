@@ -1,0 +1,5 @@
+#
+# Bug#22469130: FOREIGN KEY ON DELETE CASCADE NOT ALLOWED
+#		WHEN A VIRTUAL INDEX EXISTS.
+# Add the VIRTUAL INDEX contains fk constraINT column
+# using INPLACE alter operatiON

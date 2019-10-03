@@ -1,0 +1,3 @@
+select @@global.innodb_ft_result_cache_limit;
+@@innodb_ft_result_cache_limit
+NULL

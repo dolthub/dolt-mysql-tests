@@ -1,0 +1,2 @@
+SET windowing_use_high_precision= ON;
+Single window function (plus ORDER BY).

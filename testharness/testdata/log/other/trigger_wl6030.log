@@ -1,0 +1,3 @@
+#
+# WL#6030: Triggers are not processed for NOT NULL columns.
+#

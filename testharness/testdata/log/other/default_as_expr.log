@@ -1,0 +1,3 @@
+#
+# CREATE TABLE - column with func as DEFAULT then test DROP column.
+#

@@ -1,0 +1,8 @@
+drop table if exists t1;
+SET sql_mode = 'NO_ENGINE_SUBSTITUTION';
+select 1.1 IN (1.0, 1.2);
+1.1 IN (1, 1.2)
+0
+select 1.1 IN (1.0, 1.2, 1.1, 1.4, 0.5);
+1.1 IN (1, 1.2, 1.1, 1.4, 0.5)
+1

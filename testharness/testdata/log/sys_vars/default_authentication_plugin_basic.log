@@ -1,0 +1,7 @@
+SELECT  @@GLOBAL.default_authentication_plugin;
+@@GLOBAL.default_authentication_plugin
+NULL
+SELECT COUNT(@@GLOBAL.default_authentication_plugin);
+COUNT(@@GLOBAL.default_authentication_plugin)
+0
+1 Expected

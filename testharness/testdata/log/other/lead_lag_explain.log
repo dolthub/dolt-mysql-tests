@@ -1,0 +1,3 @@
+# Test of SQL window functions NTH_VALUE
+# ----------------------------------------------------------------------
+SET NAMES utf8mb4;

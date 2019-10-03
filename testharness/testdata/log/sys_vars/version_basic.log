@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_053_01----------------------#'
+SELECT COUNT(@@GLOBAL.version);
+COUNT(@@GLOBAL.version)
+0
+1 Expected
+'#---------------------BS_STVARS_053_02----------------------#'

@@ -1,0 +1,2 @@
+# Bug#26542829: Assertion !(check_datetime_range(ltime)) failed
+When bug#26808862 is fixed, move contents to derived.test

@@ -1,0 +1,8 @@
+#
+# Bug #40113: Embedded SELECT inside UPDATE or DELETE can timeout 
+#  without error
+#
+CREATE TABLE t1 (a int, b int, PRIMARY KEY  (a,b)) ENGINE=InnoDB;
+INSERT INTO t1 (a,b) VALUES (1070109,99);
+updated
+1

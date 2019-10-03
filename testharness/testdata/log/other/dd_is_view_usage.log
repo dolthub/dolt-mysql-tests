@@ -1,0 +1,4 @@
+#
+# WL#11864 Implement I_S.VIEW_TABLE_USAGE and I_S.VIEW_ROUTINE_USAGE
+#
+# Basic schema definition used by test cases.

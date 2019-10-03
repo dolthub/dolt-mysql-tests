@@ -1,0 +1,4 @@
+#
+# Checking min, max and incorrect values of innodb_fsync_threshold status variable
+#
+SET @orig_fsync_threshold = @@global.innodb_fsync_threshold;

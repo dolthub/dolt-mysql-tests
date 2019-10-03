@@ -1,0 +1,20 @@
+#
+# WL#6742 - Test the interaction of multiple transactions using
+# different isolation levels to make sure that the value returned
+# by count(*) always reflects the correct view of the table according
+# to the transaction's selected isolation level.
+#
+#
+# Traverse various indexes to get the right counts.
+# This especially tests count(*) which is pushed down to InnoDB in WL#6742.
+#
+CREATE TABLE t1 (
+c1 INT AUTO_INCREMENT PRIMARY KEY,
+c2 INT,
+c3 INT,
+c4 INT,
+INDEX k2(c2)
+) Engine=InnoDB;
+INSERT INTO t1(c2,c3,c4) VALUES (1, 1, 1);
+updated
+1

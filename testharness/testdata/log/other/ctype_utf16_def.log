@@ -1,0 +1,6 @@
+SHOW VARIABLES LIKE 'collation_server';
+Variable_name	Value
+SHOW VARIABLES LIKE 'character_set_server';
+Variable_name	Value
+SHOW VARIABLES LIKE 'ft_stopword_file';
+Variable_name	Value

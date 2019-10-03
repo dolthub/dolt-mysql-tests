@@ -1,0 +1,2 @@
+SET @@session.default_storage_engine = 'MyISAM';
+# RAND()

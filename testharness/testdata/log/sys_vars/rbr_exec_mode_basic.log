@@ -1,0 +1,1 @@
+set @saved_session_rbr_exec_mode = @@session.rbr_exec_mode;

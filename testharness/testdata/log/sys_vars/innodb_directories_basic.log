@@ -1,0 +1,4 @@
+Valid values are semi-colon separated strings
+select @@global.innodb_directories;
+@@innodb_directories
+NULL

@@ -1,0 +1,3 @@
+** Setup **
+
+SET @start_value = @@global.query_prealloc_size;

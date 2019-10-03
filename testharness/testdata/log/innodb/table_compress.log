@@ -1,0 +1,7 @@
+#
+# Test support for the COMPRESSION syntax on any system by
+# making InnoDB ignore the actual Punch Hole and setting the
+# file system punch hole size (block_size or compression unit)
+# to half the UNIV_PAGE_SIZE so that punch hole seems to work
+# even though no space on the FS is being released.
+#

@@ -1,0 +1,4 @@
+# Create a table with three columns:
+# 1) Normal POINT column without SRID specification
+# 2) Normal POINT column with SRID 0
+# 3) Normal POINT column with SRID 4326

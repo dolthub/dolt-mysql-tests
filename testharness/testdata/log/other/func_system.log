@@ -1,0 +1,4 @@
+SET sql_mode = 'NO_ENGINE_SUBSTITUTION';
+select database();
+DATABASE()
+dolt

@@ -1,0 +1,3 @@
+select @@global.performance_schema_max_index_stat;
+@@performance_schema_max_index_stat
+NULL

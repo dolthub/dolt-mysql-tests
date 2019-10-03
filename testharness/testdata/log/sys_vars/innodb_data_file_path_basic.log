@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_024_01----------------------#'
+SELECT COUNT(@@GLOBAL.innodb_data_file_path);
+COUNT(@@GLOBAL.innodb_data_file_path)
+0
+1 Expected
+'#---------------------BS_STVARS_024_02----------------------#'

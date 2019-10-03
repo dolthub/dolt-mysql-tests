@@ -1,0 +1,5 @@
+#
+# WL10778: Parser: output deprecation warnings on utf8 references, where
+# utf8mb3 is an alias of utf8.
+#
+# Character set introducers.

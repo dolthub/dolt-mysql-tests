@@ -1,0 +1,9 @@
+#
+# Bug#18446462: ASSERT `ROWS >= 0.0' AT
+#               COST_MODEL_SERVER::ROW_EVALUATE_COST IN 
+#               OPT_COSTMODEL.H
+#
+create table t10 (pk int primary key, i int);
+insert into t10 values (1,1);
+updated
+1

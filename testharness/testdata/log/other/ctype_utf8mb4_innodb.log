@@ -1,0 +1,5 @@
+drop table if exists t1,t2;
+#
+# Start of 5.5 tests
+#
+set names utf8mb4;

@@ -1,0 +1,14 @@
+SET @save = @@global.group_concat_max_len;
+DROP TABLE IF EXISTS t1;
+## Creating new table t1 ##
+CREATE TABLE t1
+(
+id INT NOT NULL AUTO_INCREMENT,
+PRIMARY KEY (id),
+rollno INT NOT NULL,
+name VARCHAR(30)
+);
+'#--------------------FN_DYNVARS_034_01-------------------------#'
+## Setting initial value of variable to 4 ##
+SET @@global.group_concat_max_len = 4;
+## Inserting some rows in table ##

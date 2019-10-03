@@ -1,0 +1,3 @@
+SELECT COUNT(@@GLOBAL.binlog_rotate_encryption_master_key_at_startup);
+COUNT(@@GLOBAL.binlog_rotate_encryption_master_key_at_startup)
+0

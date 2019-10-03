@@ -1,0 +1,10 @@
+drop table if exists t1, t2;
+#
+# Bug #36676: multiupdate using LEFT JOIN updates only
+#             first row or fails with an error:
+#  ERROR 1022 (23000): Can't write; duplicate key in table ''
+#
+
+#
+# Multiupdate creates MyISAM temporary table without MEMORY table
+#

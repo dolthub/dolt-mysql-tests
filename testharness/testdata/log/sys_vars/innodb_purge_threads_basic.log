@@ -1,0 +1,8 @@
+SELECT COUNT(@@GLOBAL.innodb_purge_threads);
+COUNT(@@GLOBAL.innodb_purge_threads)
+0
+1 Expected
+SELECT COUNT(@@innodb_purge_threads);
+COUNT(@@innodb_purge_threads)
+0
+1 Expected

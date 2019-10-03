@@ -1,0 +1,4 @@
+SELECT COUNT(@@GLOBAL.innodb_temp_tablespaces_dir);
+COUNT(@@GLOBAL.innodb_temp_tablespaces_dir)
+0
+1 Expected

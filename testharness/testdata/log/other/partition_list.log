@@ -1,0 +1,5 @@
+drop table if exists t1;
+#
+# Bug#62505: ALTER TABLE ADD PARTITION fails for LIST partitions with
+#            more than 16 items
+#

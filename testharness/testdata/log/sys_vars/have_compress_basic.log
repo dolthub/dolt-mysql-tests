@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_006_01----------------------#'
+SELECT COUNT(@@GLOBAL.have_compress);
+COUNT(@@GLOBAL.have_compress)
+0
+1 Expected
+'#---------------------BS_STVARS_006_02----------------------#'

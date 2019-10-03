@@ -1,0 +1,3 @@
+select @@global.performance_schema_max_sql_text_length;
+@@performance_schema_max_sql_text_length
+NULL

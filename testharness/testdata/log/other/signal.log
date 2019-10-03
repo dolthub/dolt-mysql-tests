@@ -1,0 +1,7 @@
+#
+# PART 1: syntax
+#
+#
+# Test every new reserved and non reserved keywords
+#
+drop table if exists signal_non_reserved;

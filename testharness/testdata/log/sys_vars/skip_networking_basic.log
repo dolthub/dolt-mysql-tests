@@ -1,0 +1,3 @@
+select @@global.skip_networking;
+@@skip_networking
+NULL

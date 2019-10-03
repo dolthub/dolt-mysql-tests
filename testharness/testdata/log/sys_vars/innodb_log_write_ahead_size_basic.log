@@ -1,0 +1,9 @@
+SET @start_global_value = @@global.innodb_log_write_ahead_size;
+SET global innodb_log_write_ahead_size=4096;
+Valid values are positive number
+SELECT @@global.innodb_log_write_ahead_size >= 512;
+@@innodb_log_write_ahead_size >= 512
+1
+SELECT @@global.innodb_log_write_ahead_size <= 16*1024;
+@@innodb_log_write_ahead_size <= 16 * 1024
+1

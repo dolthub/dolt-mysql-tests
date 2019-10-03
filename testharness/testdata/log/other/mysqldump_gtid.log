@@ -1,0 +1,4 @@
+#
+# WL#12959: Contribution by Facebook: Added optional commenting of the
+#   @@GLOBAL.GTID_PURGED by dump
+#

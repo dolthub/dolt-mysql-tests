@@ -1,0 +1,2 @@
+SET @save_sql_mode=@@sql_mode;
+SET sql_mode='';

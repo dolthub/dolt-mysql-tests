@@ -1,0 +1,4 @@
+#
+# WL#12236 CREATE TABLESPACE without DATAFILE clause
+#
+include/master-slave.inc

@@ -1,0 +1,2 @@
+drop table if exists t1;
+set names latin2;

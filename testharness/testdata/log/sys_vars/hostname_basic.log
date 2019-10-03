@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_019_01----------------------#'
+SELECT COUNT(@@GLOBAL.hostname);
+COUNT(@@GLOBAL.hostname)
+0
+1 Expected
+'#---------------------BS_STVARS_019_02----------------------#'

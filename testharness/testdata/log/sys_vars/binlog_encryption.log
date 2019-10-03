@@ -1,0 +1,3 @@
+SELECT COUNT(@@GLOBAL.binlog_encryption);
+COUNT(@@GLOBAL.binlog_encryption)
+0

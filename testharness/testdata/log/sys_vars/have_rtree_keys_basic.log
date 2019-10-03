@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_016_01----------------------#'
+SELECT COUNT(@@GLOBAL.have_rtree_keys);
+COUNT(@@GLOBAL.have_rtree_keys)
+0
+1 Expected
+'#---------------------BS_STVARS_016_02----------------------#'

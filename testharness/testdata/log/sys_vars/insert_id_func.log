@@ -1,0 +1,15 @@
+drop table if exists t1;
+## Creating new table t1 ##
+CREATE TABLE t1
+(
+id INT NOT NULL auto_increment,
+PRIMARY KEY (id),
+name VARCHAR(30)
+);
+'#--------------------FN_DYNVARS_051_01-------------------------#'
+## Setting value of variable to 100 ## 
+SET @@session.insert_id = 100;
+SELECT @@session.insert_id;
+@@insert_id
+100
+## Inserting some rows in table ##

@@ -1,0 +1,1 @@
+set optimizer_switch='mrr=on,mrr_cost_based=on';
