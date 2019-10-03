@@ -3,10 +3,10 @@ package main
 import (
 	"bufio"
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
+	"path/filepath"
 	"sort"
 	"strconv"
 	"strings"
@@ -25,6 +25,7 @@ const (
 const startMarker = "Start:----- "
 const endMarker = "End:------- "
 const startTimeMarker = "StartTime:"
+
 const endTimeMarker = "EndTime:"
 
 type State struct {
@@ -49,28 +50,29 @@ type TestResultArray struct {
 }
 
 func main() {
-	results := parseResultFile()
-	parseDetailsFile(results)
-	writeResultsFile(results)
-}
-
-func parseResultFile() Results {
-	resultFileLines, err := readFileToLines("../output/results.txt")
+	globalCommitHash, err := readFile("currentdolt.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
-	globalCommitHash, err := readFile("currentdolt.txt")
+
+	results := parseResultFile("../output", globalCommitHash)
+	parseDetailsFile("../output", results)
+	writeResultsFile("doltvals.json", results)
+}
+
+func parseResultFile(outputDir, commitHash string) Results {
+	resultFile := filepath.Join(outputDir, "results.txt")
+	resultFileLines, err := readFileToLines(resultFile)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	results := Results(make(map[string]*TestResult))
 	for _, resultLine := range resultFileLines {
-		fmt.Printf("line is %v", resultLine)
 		resultSplit := strings.Split(resultLine, ":")
 		testResult := &TestResult{
 			Name:       resultSplit[0],
-			CommitHash: globalCommitHash,
+			CommitHash: commitHash,
 		}
 		switch Result(resultSplit[1]) {
 		case Result_Passed:
@@ -88,8 +90,9 @@ func parseResultFile() Results {
 	return results
 }
 
-func parseDetailsFile(results map[string]*TestResult) {
-	detailFileLines, err := readFileToLines("../output/details.txt")
+func parseDetailsFile(outputDir string, results map[string]*TestResult) {
+	detailsFile := filepath.Join(outputDir, "details.txt")
+	detailFileLines, err := readFileToLines(detailsFile)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -100,8 +103,8 @@ func parseDetailsFile(results map[string]*TestResult) {
 	for _, detailLine := range detailFileLines {
 		if state.TestResult == nil {
 			if strings.HasPrefix(detailLine, startMarker) {
-				var ok bool
 				testName := detailLine[len(startMarker):]
+				var ok bool
 				if state.TestResult, ok = results[testName]; !ok {
 					log.Fatalf("Uncrecognized test name %v on line %v", testName, detailLine)
 				}
@@ -112,14 +115,17 @@ func parseDetailsFile(results map[string]*TestResult) {
 		if strings.HasPrefix(detailLine, endMarker+state.TestResult.Name) {
 			state.TestResult.Info = strings.TrimSpace(state.StringBuilder.String())
 			state.TestResult.ElapsedSeconds = int64(state.LastTimestamp.Sub(state.FirstTimestamp).Seconds())
-			rejectFileName := "../output/reject/" + state.TestResult.Name + ".reject"
+
+
+			rejectFileName := filepath.Join(outputDir, "reject", state.TestResult.Name + ".reject")
 			if fileExists(rejectFileName) {
 				state.TestResult.Reject, err = readFile(rejectFileName)
 				if err != nil {
 					log.Fatal(err)
 				}
 			}
-			logFileName := "../output/log/" + state.TestResult.Name + ".log"
+
+			logFileName := filepath.Join(outputDir, "log", state.TestResult.Name + ".log")
 			if fileExists(logFileName) {
 				state.TestResult.Log, err = readFile(logFileName)
 				if err != nil {
@@ -163,7 +169,7 @@ func parseTimestamp(timeString string) time.Time {
 	return timestamp
 }
 
-func writeResultsFile(results map[string]*TestResult) {
+func writeResultsFile(outputFile string, results map[string]*TestResult) {
 	var testNames []string
 	for testName := range results {
 		testNames = append(testNames, testName)
@@ -178,7 +184,7 @@ func writeResultsFile(results map[string]*TestResult) {
 	if err != nil {
 		log.Fatal(err)
 	}
-	err = ioutil.WriteFile("doltvals.json", resultsJSONBytes, 0644)
+	err = ioutil.WriteFile(outputFile, resultsJSONBytes, 0644)
 	if err != nil {
 		log.Fatal(err)
 	}
