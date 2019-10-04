@@ -1,0 +1,1 @@
+drop table if exists con, aux, nul, lpt1, com1, `clock$`;

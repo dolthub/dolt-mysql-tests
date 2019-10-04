@@ -1,0 +1,7 @@
+set names ascii;
+select 'e'='`';
+"e" = "`"
+0
+select 'y'='~';
+"y" = "~"
+0

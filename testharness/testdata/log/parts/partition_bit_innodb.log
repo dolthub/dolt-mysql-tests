@@ -1,0 +1,2 @@
+SET @max_row = 20;
+drop table if exists t1;

@@ -1,0 +1,28 @@
+drop table if exists t1,t2,t3;
+create table t1 (libname varchar(21) not null, city text, primary key (libname));
+create table t2 (isbn varchar(21) not null, author text, title text, primary key (isbn));
+create table t3 (isbn varchar(21) not null, libname varchar(21) not null, quantity int ,primary key (isbn,libname));
+insert into t2 values ('001','Daffy','A duck''s life');
+updated
+1
+insert into t2 values ('002','Bugs','A rabbit\'s life');
+updated
+1
+insert into t2 values ('003','Cowboy','Life on the range');
+updated
+1
+insert into t2 values ('000','Anonymous','Wanna buy this book?');
+updated
+1
+insert into t2 values ('004','Best Seller','One Heckuva book');
+updated
+1
+insert into t2 values ('005','EveryoneBuys','This very book');
+updated
+1
+insert into t2 values ('006','San Fran','It is a san fran lifestyle');
+updated
+1
+insert into t2 values ('007','BerkAuthor','Cool.Berkley.the.book');
+updated
+1

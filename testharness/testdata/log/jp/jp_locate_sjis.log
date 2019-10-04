@@ -1,0 +1,10 @@
+drop table if exists `‚s‚P`;
+drop table if exists `‚s‚Q`;
+drop table if exists `‚s‚R`;
+drop table if exists `‚s‚S`;
+drop table if exists `‚s‚T`;
+drop table if exists `‚s‚U`;
+drop table if exists `‚s‚V`;
+drop table if exists `‚s‚W`;
+drop table if exists `‚s‚X`;
+SET NAMES sjis;

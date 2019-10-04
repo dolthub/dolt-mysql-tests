@@ -1,0 +1,10 @@
+#########################################################################
+# Verify:
+#  Relay log file names are properly set for multisource replication
+#  In this tests we test if relay log files per channel based
+#  on --relay-log-index and --relay-log is properly set.
+# 1. The slave is started with --relay-log=msr-relay
+# 2. the slave is restarted with --relay-log-index=idx-msr-relay
+# 3. the slave is restarted with --relay-log-index=idx-msr-relay.idx
+#     and --relay-log=msr-relay.log
+#########################################################################

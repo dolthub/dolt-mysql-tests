@@ -1,0 +1,4 @@
+drop table if exists t1;
+#
+# Bug#56814 Explain + subselect + fulltext crashes server
+#

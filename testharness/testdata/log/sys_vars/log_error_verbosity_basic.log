@@ -1,0 +1,13 @@
+SET @old_log_error_verbosity= @@global.log_error_verbosity;
+SET GLOBAL log_error_verbosity=DEFAULT;
+SELECT @@global.log_error_verbosity;
+@@log_error_verbosity
+NULL
+SET GLOBAL log_error_verbosity=0;
+SELECT @@global.log_error_verbosity;
+@@log_error_verbosity
+0
+SET GLOBAL log_error_verbosity=4;
+SELECT @@global.log_error_verbosity;
+@@log_error_verbosity
+4

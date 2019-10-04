@@ -1,0 +1,8 @@
+SET @@session.default_storage_engine = 'MyISAM';
+#            - UNIQUE KEY
+#            - INDEX
+#            - FULLTEXT INDEX
+#            - SPATIAL INDEX (not supported)
+#            - FOREIGN INDEX (partially supported)
+#            - CHECK (allowed but not used)
+# UNIQUE

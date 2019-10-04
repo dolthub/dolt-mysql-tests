@@ -1,0 +1,1 @@
+SET @orig = @@global.innodb_checksum_algorithm;

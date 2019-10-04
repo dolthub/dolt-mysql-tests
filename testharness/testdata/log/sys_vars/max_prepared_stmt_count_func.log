@@ -1,0 +1,6 @@
+** Setup **
+
+SET @global_max_prepared_stmt_count = @@global.max_prepared_stmt_count;
+'#---------------------FN_DYNVARS_031_01----------------------#'
+SET GLOBAL max_prepared_stmt_count=2;
+** Prepare statements **

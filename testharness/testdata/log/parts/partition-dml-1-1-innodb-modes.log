@@ -1,0 +1,2 @@
+set @save_sqlmode= @@global.sql_mode;
+# Additional tests for WL#5217 by QA, testplan 1.1

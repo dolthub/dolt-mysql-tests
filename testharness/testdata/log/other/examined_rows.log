@@ -1,0 +1,9 @@
+#
+# Bug #17059925 : UNIONS COMPUTES ROWS_EXAMINED INCORRECTLY
+#
+SET @old_slow_query_log= @@global.slow_query_log;
+SET @old_log_output= @@global.log_output;
+SET @old_long_query_time= @@long_query_time;
+SET GLOBAL log_output= "TABLE";
+SET GLOBAL slow_query_log= ON;
+SET SESSION long_query_time= 0;

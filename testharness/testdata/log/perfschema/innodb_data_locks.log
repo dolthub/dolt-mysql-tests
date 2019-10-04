@@ -1,0 +1,4 @@
+drop table if exists t1_min;
+drop table if exists t1_max;
+drop table if exists t1_part;
+drop table if exists t1_subpart;

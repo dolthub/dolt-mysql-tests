@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS t1, `t``1`, `t 1`;
+drop view if exists v1;

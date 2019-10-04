@@ -1,0 +1,4 @@
+# This test scripts covers upgrade of tables, views, tablespaces,
+# events, stored routines and triggers from 5.7 to 8.0.
+# Set different paths for --datadir
+# Stop DB server which was created by MTR default

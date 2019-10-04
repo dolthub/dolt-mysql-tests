@@ -1,0 +1,6 @@
+SET @@session.default_storage_engine = 'InnoDB';
+#
+# NUMERIC FUNCTIONS
+#
+# ABS()
+set sql_warnings = 1;

@@ -1,0 +1,3 @@
+'#--------------------FN_DYNVARS_015_01-------------------------#'
+SET @global_collation_connection = @@global.collation_connection;
+SET @session_collation_connection = @@session.collation_connection;

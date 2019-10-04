@@ -1,0 +1,5 @@
+SELECT @@session.show_old_temporals;
+@@show_old_temporals
+NULL
+SHOW SESSION VARIABLES LIKE 'show_old_temporals';
+Variable_name	Value

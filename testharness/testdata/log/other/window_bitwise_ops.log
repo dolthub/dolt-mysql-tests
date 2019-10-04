@@ -1,0 +1,1 @@
+SET SESSION windowing_use_high_precision=FALSE;

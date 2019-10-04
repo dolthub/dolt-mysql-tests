@@ -1,0 +1,5 @@
+#
+# Checking dd string memory use with PFS
+#
+# Create and drop a basic table to populate the
+# shared cache with DD table objects.

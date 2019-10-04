@@ -1,0 +1,12 @@
+#
+# Test of rewrites of queries where the database (a.k.a. schema) is not
+# specified in the pattern.
+#
+# MySQL behaves in the most peculiar way in this respect. Some
+# explanation is order here: When a query is parsed, the
+# parser injects the current database when parsing a table name, i.e.
+# 'table' is _parsed_ as '<current database>.table'.
+#
+# The session that loads the rules has no current database, so the rule
+# has to specify it if there are unqualified table names in the pattern.
+#

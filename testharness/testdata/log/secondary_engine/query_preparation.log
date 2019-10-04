@@ -1,0 +1,4 @@
+#
+# Test that query preparation is able to make plans for executing
+# a query on a secondary storage engine.
+#

@@ -1,0 +1,2 @@
+# ===== csv_alter_table.1 =====
+DROP TABLE IF EXISTS t1;

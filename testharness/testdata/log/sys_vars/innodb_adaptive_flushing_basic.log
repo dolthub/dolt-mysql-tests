@@ -1,0 +1,1 @@
+SET @start_global_value = @@global.innodb_adaptive_flushing;

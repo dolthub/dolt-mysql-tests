@@ -1,0 +1,12 @@
+SET @@session.auto_increment_increment=40960;
+SELECT @@session.auto_increment_increment;
+@@auto_increment_increment
+40960
+SET @@session.tmp_table_size=40960;
+SELECT @@session.tmp_table_size;
+@@tmp_table_size
+40960
+SET @@session.max_join_size=40960;
+SELECT @@session.max_join_size;
+@@max_join_size
+40960

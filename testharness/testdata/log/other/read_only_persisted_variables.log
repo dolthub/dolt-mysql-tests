@@ -1,0 +1,3 @@
+#
+# WL#9787: Allow SET PERSIST to set read-only variables too
+#

@@ -1,0 +1,13 @@
+drop table if exists t1;
+## Creating new table ##
+CREATE TABLE t1
+(
+id INT NOT NULL auto_increment,
+PRIMARY KEY (id),
+name varchar(30)
+) ENGINE = INNODB;
+'#--------------------FN_DYNVARS_003_01-------------------------#'
+## Setting variable's value to 0 i.e false ##
+SET @@autocommit = 0;
+'#--------------------FN_DYNVARS_003_02-------------------------#'
+## Creating new connection ## 

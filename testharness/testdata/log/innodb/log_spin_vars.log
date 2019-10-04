@@ -1,0 +1,3 @@
+'#-----------------------------------------------------------#'
+'Test what happens when the innodb_log_wait_for_flush_spin_hwm is changed'
+' in runtime (both decreased and increased).'

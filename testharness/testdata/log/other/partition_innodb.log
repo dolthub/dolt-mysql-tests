@@ -1,0 +1,5 @@
+drop table if exists t1, t2;
+#
+#BUG 18618561: FAILED ALTER TABLE ENGINE CHANGE WITH PARTITIONS
+#              CORRUPTS FRM
+# After WL#8971, the test case was rewritten to use InnoDB.

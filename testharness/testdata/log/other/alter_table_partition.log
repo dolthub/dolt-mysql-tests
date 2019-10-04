@@ -1,0 +1,4 @@
+#
+# Test the syntax for ALTER TABLE ... PARTITION operations,
+# covering combinations of different ALGORITHM and LOCK.
+#

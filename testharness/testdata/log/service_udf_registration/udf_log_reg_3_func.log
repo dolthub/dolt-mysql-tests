@@ -1,0 +1,5 @@
+SET @old_general_log= @@global.general_log;
+SET @old_log_output= @@global.log_output;
+SET @old_general_log_file= @@global.general_log_file;
+SET global general_log= ON;
+SET global log_output='table';

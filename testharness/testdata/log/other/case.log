@@ -1,0 +1,11 @@
+drop table if exists t1, t2;
+SET sql_mode = 'NO_ENGINE_SUBSTITUTION';
+select CASE "b" when "a" then 1 when "b" then 2 END;
+CASE "b" WHEN "a" THEN 1 WHEN "b" THEN 2 END
+2
+select CASE "c" when "a" then 1 when "b" then 2 END;
+CASE "c" WHEN "a" THEN 1 WHEN "b" THEN 2 END
+NULL
+select CASE "c" when "a" then 1 when "b" then 2 ELSE 3 END;
+CASE "c" WHEN "a" THEN 1 WHEN "b" THEN 2 ELSE 3 END
+3

@@ -1,0 +1,5 @@
+create table t1(a int primary key, b int not null, index(b)) engine = ndb;
+insert into t1 values (1,1), (2,2);
+updated
+2
+set autocommit=0;

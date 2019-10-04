@@ -1,0 +1,4 @@
+** Setup **
+
+SET @default_read_only = @@read_only;
+'#--------------------FN_DYNVARS_140_01-------------------------#'

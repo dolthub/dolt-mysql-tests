@@ -1,0 +1,1 @@
+set global innodb_file_per_table=1;

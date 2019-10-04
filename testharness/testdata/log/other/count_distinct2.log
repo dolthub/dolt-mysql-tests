@@ -1,0 +1,2 @@
+drop table if exists t1;
+SET @big_tables_save=@@big_tables;

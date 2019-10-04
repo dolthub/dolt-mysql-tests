@@ -1,0 +1,4 @@
+# WL#12393: Logging: Add new command line option for richer slow query logging
+
+# test global variable "log_slow_extra"
+

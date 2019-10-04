@@ -1,0 +1,5 @@
+drop table if exists t1, t2;
+#
+# Bug#11765667: bug#58655: ASSERTION FAILED,
+#                          SERVER CRASHES WITH MYSQLD GOT SIGNAL 6
+#

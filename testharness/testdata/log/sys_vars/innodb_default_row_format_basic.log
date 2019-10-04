@@ -1,0 +1,15 @@
+SELECT  @@global.innodb_default_row_format;
+@@innodb_default_row_format
+NULL
+SET GLOBAL innodb_default_row_format = 'redundant';
+SELECT @@global.innodb_default_row_format;
+@@innodb_default_row_format
+redundant
+SET GLOBAL innodb_default_row_format = 'dynamic';
+SELECT @@global.innodb_default_row_format;
+@@innodb_default_row_format
+dynamic
+SET GLOBAL innodb_default_row_format = 'compact';
+SELECT @@global.innodb_default_row_format;
+@@innodb_default_row_format
+compact

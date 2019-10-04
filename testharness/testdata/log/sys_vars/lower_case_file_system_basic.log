@@ -1,0 +1,3 @@
+select @@global.lower_case_file_system=2;
+@@lower_case_file_system = 2
+NULL

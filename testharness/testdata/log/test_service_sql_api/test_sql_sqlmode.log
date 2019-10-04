@@ -1,0 +1,2 @@
+SET @sql_mode_global = @@global.sql_mode;
+SET @sql_mode_session = @@session.sql_mode;

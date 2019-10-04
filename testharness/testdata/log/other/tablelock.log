@@ -1,0 +1,11 @@
+drop table if exists t1,t2;
+create table t1 ( n int auto_increment primary key);
+lock tables t1 write;
+Warnings:
+Warning	0	table t1 is not lockable
+insert into t1 values(NULL);
+updated
+1
+Warnings:
+Warning	0	table t1 is not lockable
+unlock tables;

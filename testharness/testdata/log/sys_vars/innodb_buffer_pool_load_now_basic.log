@@ -1,0 +1,1 @@
+SET @orig = @@global.innodb_buffer_pool_load_now;

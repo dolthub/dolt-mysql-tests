@@ -1,0 +1,19 @@
+SELECT @@innodb_stats_persistent;
+@@innodb_stats_persistent
+NULL
+SET GLOBAL innodb_stats_persistent=ON;
+SELECT @@innodb_stats_persistent;
+@@innodb_stats_persistent
+1
+SET GLOBAL innodb_stats_persistent=OFF;
+SELECT @@innodb_stats_persistent;
+@@innodb_stats_persistent
+0
+SET GLOBAL innodb_stats_persistent=1;
+SELECT @@innodb_stats_persistent;
+@@innodb_stats_persistent
+1
+SET GLOBAL innodb_stats_persistent=0;
+SELECT @@innodb_stats_persistent;
+@@innodb_stats_persistent
+0

@@ -1,0 +1,9 @@
+SET @mysqlx_enable_hello_notice_sav= @@global.mysqlx_enable_hello_notice;
+SET GLOBAL mysqlx_enable_hello_notice=false;
+show variables like 'mysqlx_enable_hello_notice';
+Variable_name	Value
+mysqlx_enable_hello_notice	false
+SET @@global.mysqlx_enable_hello_notice=true;
+show variables like 'mysqlx_enable_hello_notice';
+Variable_name	Value
+mysqlx_enable_hello_notice	true

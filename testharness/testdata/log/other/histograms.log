@@ -1,0 +1,6 @@
+##################
+# UPDATE HISTOGRAM
+##################
+#
+# Verify that we can build and store a histogram for all valid data types.
+#

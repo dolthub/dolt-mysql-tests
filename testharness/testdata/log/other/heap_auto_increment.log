@@ -1,0 +1,2 @@
+drop table if exists t1;
+create table t1 (a int not null auto_increment,b int, primary key (a)) engine=heap auto_increment=3;

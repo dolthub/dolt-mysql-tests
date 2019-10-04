@@ -1,0 +1,3 @@
+#
+# Test for WL#12935: Control what plugins can be passed to --early-plugin-load
+#

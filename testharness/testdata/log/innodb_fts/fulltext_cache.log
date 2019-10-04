@@ -1,0 +1,12 @@
+drop table if exists t1, t2;
+CREATE TABLE t1 (
+id int(10) unsigned NOT NULL auto_increment,
+q varchar(255) default NULL,
+PRIMARY KEY (id)
+) ENGINE = InnoDB;
+INSERT INTO t1 VALUES (1,'aaaaaaaaa dsaass de');
+updated
+1
+INSERT INTO t1 VALUES (2,'ssde df s fsda sad er');
+updated
+1

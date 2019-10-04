@@ -1,0 +1,1 @@
+SET @orig = @@global.windowing_use_high_precision;

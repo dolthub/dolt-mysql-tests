@@ -1,0 +1,4 @@
+SELECT @@GLOBAL.binlog_row_metadata;
+@@GLOBAL.binlog_row_metadata
+NULL
+MINIMAL Expected

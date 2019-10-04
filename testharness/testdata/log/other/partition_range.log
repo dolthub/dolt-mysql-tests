@@ -1,0 +1,4 @@
+drop table if exists t1, t2;
+#
+# Bug#48229: group by performance issue of partitioned table
+#

@@ -1,0 +1,7 @@
+#
+# Bug#26136509 ADD A MAX_RECURSION VARIABLE TO LIMIT RECURSION IN CTES
+#
+SELECT @@cte_max_recursion_depth;
+@@cte_max_recursion_depth
+NULL
+SET @m = 1001;

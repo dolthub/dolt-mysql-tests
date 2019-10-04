@@ -1,0 +1,10 @@
+#
+# Bug #11755818 LIKE DOESN'T MATCH WHEN CP932_BIN/SJIS_BIN COLLATIONS ARE 
+#               USED.
+#
+SET @old_character_set_client= @@character_set_client;
+SET @old_character_set_connection= @@character_set_connection;
+SET @old_character_set_results= @@character_set_results;
+SET character_set_client= 'utf8';
+SET character_set_connection= 'utf8';
+SET character_set_results= 'utf8';

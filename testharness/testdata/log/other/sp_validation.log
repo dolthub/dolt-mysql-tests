@@ -1,0 +1,8 @@
+
+#
+# WL#4179: Stored programs: validation of stored program statements.
+#
+
+# The test case below demonstrates that meta-data changes are detected
+# by triggers.
+SET sql_mode = 'NO_ENGINE_SUBSTITUTION';

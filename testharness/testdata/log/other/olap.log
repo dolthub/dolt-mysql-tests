@@ -1,0 +1,6 @@
+DROP TABLE IF EXISTS t1,t2;
+SET @sav_dpi= @@div_precision_increment;
+SET div_precision_increment= 5;
+SHOW VARIABLES LIKE 'div_precision_increment';
+Variable_name	Value
+div_precision_increment	5

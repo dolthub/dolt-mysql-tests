@@ -1,0 +1,10 @@
+drop table if exists `£Ô£±`;
+drop table if exists `£Ô£²`;
+drop table if exists `£Ô£³`;
+drop table if exists `£Ô£´`;
+drop table if exists `£Ô£µ`;
+drop table if exists `£Ô£¶`;
+drop table if exists `£Ô£·`;
+drop table if exists `£Ô£¸`;
+drop table if exists `£Ô£¹`;
+SET NAMES ujis;

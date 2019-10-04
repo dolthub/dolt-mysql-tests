@@ -1,0 +1,10 @@
+drop table if exists `Ｔ１`;
+drop table if exists `Ｔ２`;
+drop table if exists `Ｔ３`;
+drop table if exists `Ｔ４`;
+drop table if exists `Ｔ５`;
+drop table if exists `Ｔ６`;
+drop table if exists `Ｔ７`;
+drop table if exists `Ｔ８`;
+drop table if exists `Ｔ９`;
+SET NAMES utf8;

@@ -1,0 +1,3 @@
+select @@global.innodb_write_io_threads;
+@@innodb_write_io_threads
+NULL

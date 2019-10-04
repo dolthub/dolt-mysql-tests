@@ -1,0 +1,9 @@
+
+##### TEST 1 - VERIFY QUERY_SAMPLE_TEXT LENGTH RETURNS NULL WHEN SQL TEXT LENGTH IS SET TO 0 
+
+
+# Verify sql text length = 0 
+SELECT @@global.performance_schema_max_sql_text_length;
+@@performance_schema_max_sql_text_length
+NULL
+

@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_026_01----------------------#'
+SELECT COUNT(@@GLOBAL.innodb_doublewrite);
+COUNT(@@GLOBAL.innodb_doublewrite)
+0
+1 Expected
+'#---------------------BS_STVARS_026_02----------------------#'

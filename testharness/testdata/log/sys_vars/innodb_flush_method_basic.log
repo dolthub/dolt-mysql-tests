@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_029_01----------------------#'
+SELECT @@GLOBAL.innodb_flush_method IN ('fsync', 'unbuffered');
+@@GLOBAL.innodb_flush_method IN ("fsync", "unbuffered")
+NULL
+1 Expected
+'#---------------------BS_STVARS_029_02----------------------#'

@@ -1,0 +1,13 @@
+CREATE TABLE t1 (i INT, v INT, PRIMARY KEY (i));
+INSERT INTO t1 VALUES (1, NULL);
+updated
+1
+INSERT INTO t1 VALUES (2, 9);
+updated
+1
+INSERT INTO t1 VALUES (3, 42);
+updated
+1
+INSERT INTO t1 VALUES (4, 201);
+updated
+1

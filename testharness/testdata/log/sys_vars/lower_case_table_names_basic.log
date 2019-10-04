@@ -1,0 +1,3 @@
+select @@global.lower_case_table_names=20;
+@@lower_case_table_names = 20
+NULL

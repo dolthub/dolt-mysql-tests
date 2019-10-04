@@ -1,0 +1,1 @@
+include/begin_replace_gtid_combination.inc [gtid_mode=off/on -> default_storage_engine=InnoDB/MyISAM]

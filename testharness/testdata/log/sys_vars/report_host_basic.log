@@ -1,0 +1,3 @@
+select @@global.report_host;
+@@report_host
+NULL

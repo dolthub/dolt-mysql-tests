@@ -1,0 +1,4 @@
+** Setup **
+
+SET @session_sql_select_limit = @@SESSION.sql_select_limit;
+SET @global_sql_select_limit = @@GLOBAL.sql_select_limit;

@@ -1,0 +1,8 @@
+drop table if exists t1;
+set @@sql_mode="ANSI";
+select @@sql_mode;
+@@sql_mode
+ANSI
+SELECT 'A' || 'B';
+"A" OR "B"
+0

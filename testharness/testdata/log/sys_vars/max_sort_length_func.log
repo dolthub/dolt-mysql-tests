@@ -1,0 +1,4 @@
+SET @start_value= @@global.max_sort_length;
+SET @session_max_sort_length = @@Session.max_sort_length;
+DROP TABLE IF EXISTS t;
+** creating tables **

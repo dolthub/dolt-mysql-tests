@@ -1,0 +1,44 @@
+# The function should return NULL if any of its arguments are NULL.
+SELECT RPAD(NULL, 5, 'x') AS result;
+result
+NULL
+SELECT RPAD(NULL, NULL, 'x') AS result;
+result
+NULL
+SELECT RPAD(NULL, NULL, NULL) AS result;
+result
+NULL
+SELECT RPAD('a', NULL, 'x') AS result;
+result
+NULL
+SELECT RPAD('a', NULL, NULL) AS result;
+result
+NULL
+SELECT RPAD('a', 5, NULL) AS result;
+result
+NULL
+SELECT RPAD(NULL, 5, NULL) AS result;
+result
+NULL
+# The function should return an empty string if len is 0.
+SELECT RPAD('a', 0, 'x') AS result;
+result
+
+SELECT RPAD('a', 0, '') AS result;
+result
+
+SELECT RPAD('', 0, 'x') AS result;
+result
+
+SELECT RPAD('', 0, '') AS result;
+result
+
+# The function should return NULL if len is negative.
+SELECT RPAD('a', -1, 'x');
+rpad("a", -1, "x")
+
+# Min signed long long int:
+SELECT RPAD('a', -9223372036854775808, 'x');
+rpad("a", -9223372036854775808, "x")
+
+# Min signed long long int - 1

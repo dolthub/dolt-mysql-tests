@@ -1,0 +1,5 @@
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS;
+create table t1(a varchar(2) primary key) engine=innodb;
+insert into t1 values('');
+updated
+1

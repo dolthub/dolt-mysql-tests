@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_017_01----------------------#'
+SELECT COUNT(@@GLOBAL.have_ssl);
+COUNT(@@GLOBAL.have_ssl)
+0
+1 Expected
+'#---------------------BS_STVARS_017_02----------------------#'

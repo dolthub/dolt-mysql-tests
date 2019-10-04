@@ -1,0 +1,6 @@
+'#---------------------BS_STVARS_051_01----------------------#'
+SELECT COUNT(@@GLOBAL.thread_handling);
+COUNT(@@GLOBAL.thread_handling)
+0
+1 Expected
+'#---------------------BS_STVARS_051_02----------------------#'

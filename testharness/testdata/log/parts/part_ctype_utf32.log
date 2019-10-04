@@ -1,0 +1,4 @@
+#
+# Bug#52121 partition by key on utf32 enum field cause debug assertion: (length % 4) == 0
+#
+DROP TABLE IF EXISTS t1;
