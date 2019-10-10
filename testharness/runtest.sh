@@ -7,15 +7,6 @@ fi
 FILESDIR="$PWD/files"
 CREATEDTESTDOLTDIR="$PWD/files/.dolt"
 
-doltPid="" # global, used for cleanup
-function removeTempDolt() {
-  if [ -n "$doltPid" ]; then
-    kill "$doltPid" >/dev/null
-  fi
-  rm -rf "$CREATEDTESTDOLTDIR"
-}
-trap removeTempDolt EXIT
-
 DOLTTESTRESULTOUT="/dev/tty"
 DOLTTESTDETAILOUT="/dev/tty"
 if [ "$DTENABLEFILEOUTPUT" = true ]; then
@@ -46,6 +37,16 @@ fi
 
 { # Redirect all output contained in this block to files
 
+doltPid="" # global, used for cleanup
+function removeTempDolt() {
+  if [ -n "$doltPid" ]; then
+    kill "$doltPid" >&2
+  fi
+  rm -rf "$CREATEDTESTDOLTDIR" >&2
+}
+trap removeTempDolt EXIT
+
+    
 # Runs all the tests in a suite, which must be CWD.
 function runSuite() {
     local suiteName="$1"
@@ -63,7 +64,7 @@ function runSuite() {
 function startDoltServer() {
     pushd $FILESDIR >/dev/null
     removeTempDolt
-    dolt init --name mysqltest --email mysqltests@test.com >/dev/null
+    dolt init --name mysqltest --email mysqltests@test.com >&2
     jobs &>/dev/null
     dolt sql-server -H 127.0.0.1 -P 9091 -u root &
     newJobStarted="$(jobs -n)"
