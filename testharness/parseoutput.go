@@ -106,7 +106,7 @@ func parseDetailsFile(outputDir string, results map[string]*TestResult) {
 				testName := detailLine[len(startMarker):]
 				var ok bool
 				if state.TestResult, ok = results[testName]; !ok {
-					log.Fatalf("Uncrecognized test name %v on line %v", testName, detailLine)
+					log.Fatalf("Unrecognized test name %v on line %v", testName, detailLine)
 				}
 			}
 			continue
